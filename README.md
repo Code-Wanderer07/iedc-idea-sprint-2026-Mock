@@ -69,7 +69,7 @@ A single-page, mobile-first responsive microsite engineered for **Idea Sprint '2
 | **Typography** | Orbitron (Display), Plus Jakarta Sans (Body), Space Grotesk (Monospace) |
 | **Assets & Media** | High-DPI WebP with PNG fallbacks, Responsive `<picture>` elements |
 | **Scripting** | Vanilla JavaScript (ES6+), zero external runtime dependencies |
-| **Deployment** | GitHub Pages / Static Hosting |
+| **Deployment** | Vercel |
 
 ---
 
