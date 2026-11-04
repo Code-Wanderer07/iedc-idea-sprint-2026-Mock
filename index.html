@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Idea Sprint '26 — National University Innovation Sprint | IEDC Bootcamp CEC</title>
+<title>Idea Sprint '26 — National Innovation Sprint | IEDC Bootcamp CEC & KSUM</title>
 
 <!-- Primary SEO Meta Tags -->
 <meta name="description" content="Idea Sprint '26 — A 48-Hour National University Innovation Sprint hosted by IEDC Bootcamp CEC at College of Engineering Chengannur. 24-hour hackathon, cash prizes, and venture incubation.">
@@ -408,27 +408,45 @@
 <!-- BEGIN: MainHeader -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300" id="main-header" data-purpose="site-navigation" role="banner">
 <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 sm:h-24 flex items-center justify-between">
-<!-- Brand Logo: using provided IEDC Bootcamp CEC WebP with PNG fallback -->
-<a class="flex items-center gap-3 group shrink-0" href="#" aria-label="IEDC Bootcamp CEC Home">
-  <picture>
-    <source srcset="iedc-logo.webp" type="image/webp">
-    <img
-      src="iedc-logo.png"
-      alt="IEDC Bootcamp CEC Logo"
-      width="68"
-      height="38"
-      loading="eager"
-      decoding="async"
-      class="nav-logo-img group-hover:opacity-80 transition-opacity"
-    />
-  </picture>
-</a>
+<!-- Brand Logos: IEDC Bootcamp CEC + Kerala Startup Mission (KSUM) -->
+<div class="flex items-center gap-2.5 sm:gap-3.5 shrink-0">
+  <a class="flex items-center group shrink-0" href="#" aria-label="IEDC Bootcamp CEC Home">
+    <picture>
+      <source srcset="iedc-logo.webp" type="image/webp">
+      <img
+        src="iedc-logo.png"
+        alt="IEDC Bootcamp CEC Logo"
+        width="68"
+        height="38"
+        loading="eager"
+        decoding="async"
+        class="nav-logo-img group-hover:opacity-80 transition-opacity"
+      />
+    </picture>
+  </a>
+  <span class="hidden sm:inline-block w-px h-6 bg-white/20" aria-hidden="true"></span>
+  <a href="https://startupmission.kerala.gov.in/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center bg-white/95 hover:bg-white px-2.5 py-1 rounded-lg transition-all shadow-sm border border-white/20 group" aria-label="Kerala Startup Mission (KSUM)">
+    <picture>
+      <source srcset="ksum-logo.webp" type="image/webp">
+      <img
+        src="ksum-logo.png"
+        alt="Kerala Startup Mission"
+        width="80"
+        height="24"
+        loading="eager"
+        decoding="async"
+        class="h-5 w-auto object-contain group-hover:scale-105 transition-transform"
+      />
+    </picture>
+  </a>
+</div>
 
 <!-- Right-Aligned Nav Group: Desktop Links + CTA + Mobile Hamburger -->
 <div class="flex items-center gap-3 sm:gap-6 lg:gap-8">
-  <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs sm:text-sm font-medium text-slate-300 tracking-wide" aria-label="Primary navigation">
+  <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs sm:text-sm font-medium text-slate-200 tracking-wide" aria-label="Primary navigation">
     <a class="hover:text-neon-cyan transition-colors" href="#highlights">Highlights</a>
     <a class="hover:text-neon-cyan transition-colors" href="#timeline">Timeline</a>
+    <a class="hover:text-neon-cyan transition-colors" href="#stories">Stories</a>
     <a class="hover:text-neon-cyan transition-colors" href="#generator">Idea Generator</a>
     <a class="hover:text-neon-cyan transition-colors" href="#apply">Registration</a>
     <a class="hover:text-neon-cyan transition-colors" href="#faq">FAQ</a>
@@ -459,17 +477,21 @@
       <span>Timeline</span>
       <span class="text-xs text-neon-cyan font-bold">02</span>
     </a>
+    <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#stories">
+      <span>Stories</span>
+      <span class="text-xs text-neon-cyan font-bold">03</span>
+    </a>
     <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#generator">
       <span>Idea Generator</span>
-      <span class="text-xs text-neon-cyan font-bold">03</span>
+      <span class="text-xs text-neon-cyan font-bold">04</span>
     </a>
     <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#apply">
       <span>Registration</span>
-      <span class="text-xs text-neon-cyan font-bold">04</span>
+      <span class="text-xs text-neon-cyan font-bold">05</span>
     </a>
     <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#faq">
       <span>FAQ</span>
-      <span class="text-xs text-neon-cyan font-bold">05</span>
+      <span class="text-xs text-neon-cyan font-bold">06</span>
     </a>
   </nav>
   <div class="pt-2 border-t border-white/10">
@@ -482,7 +504,7 @@
 </header>
 <!-- END: MainHeader -->
 
-<main class="relative z-10" id="main-content" role="main">
+<main class="relative z-10" id="main-content" role="main" tabindex="-1">
 
 <!-- ============================================================
      HERO SECTION — Content overlays directly on hero-bg.png
@@ -491,16 +513,35 @@
 <section class="hero text-center" data-purpose="hero-banner" id="home">
 <div class="max-w-4xl mx-auto w-full flex flex-col items-center justify-center relative z-30">
 
+<!-- Institutional Authority Tag -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cosmic-900/90 border border-neon-cyan/35 text-neon-cyan text-[11px] font-mono font-bold tracking-wider mb-4 shadow-sm backdrop-blur-md">
+  <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse"></span>
+  <span>COLLEGE OF ENGINEERING CHENGANNUR • SUPPORTED BY KSUM</span>
+</div>
+
 <!-- Main Headline -->
 <h1 class="text-3xl sm:text-5xl lg:text-7xl font-display font-black tracking-tight uppercase text-white leading-tight drop-shadow-md">
         IDEA SPRINT <span class="bg-gradient-to-r from-white via-cyan-200 to-neon-cyan bg-clip-text text-transparent">'26</span>
 </h1>
 
 <!-- Subtitle Description -->
-<p class="mt-4 sm:mt-6 max-w-2xl text-xs sm:text-base text-slate-300 font-normal leading-relaxed text-center px-4 drop-shadow">
-        24-Hour National Innovation Hackathon hosted by 
-        <span class="text-white font-semibold">IEDC Bootcamp CEC</span>. Pushing technical boundaries in AI, deep-tech systems, and high-impact venture creation.
+<p class="mt-4 sm:mt-5 max-w-2xl text-xs sm:text-base text-slate-200 font-normal leading-relaxed text-center px-4 drop-shadow">
+        24-Hour State-Wide Innovation Ideathon hosted by 
+        <span class="text-white font-semibold">IEDC Bootcamp CEC</span> in association with <span class="text-white font-semibold">Kerala Startup Mission (KSUM)</span>. Prototyping high-impact solutions in AI, robotics, clean energy, and healthcare with mentorship from Kerala's top ecosystem founders.
 </p>
+
+<!-- Student Value Badges in Hero -->
+<div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-[11px] font-mono text-slate-200">
+  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/15 flex items-center gap-1.5 backdrop-blur-sm">
+    <span class="text-amber-400">★</span> KTU Activity Points Eligible
+  </span>
+  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/15 flex items-center gap-1.5 backdrop-blur-sm">
+    <span class="text-emerald-400">✦</span> ₹1,00,000+ Prize Pool &amp; KSUM Grants
+  </span>
+  <span class="px-3 py-1 rounded-full bg-white/5 border border-white/15 flex items-center gap-1.5 backdrop-blur-sm">
+    <span class="text-neon-cyan">⚡</span> 24H Non-Stop Hardware &amp; AI Lab
+  </span>
+</div>
 
 <!-- Dual Call to Action Buttons directly overlaying the hero background -->
 <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
@@ -513,22 +554,22 @@
 </div>
 
 <!-- Live Countdown Bar overlaying the hero background -->
-<div class="mt-8 sm:mt-12 w-full max-w-xl grid grid-cols-4 gap-2 sm:gap-4 font-mono px-1 sm:px-0" data-purpose="countdown-clock">
+<div class="mt-8 sm:mt-11 w-full max-w-xl grid grid-cols-4 gap-2 sm:gap-4 font-mono px-1 sm:px-0" data-purpose="countdown-clock">
 <div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
 <span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-days">18</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">DAYS</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">DAYS</span>
 </div>
 <div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
 <span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-hours">13</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">HOURS</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">HOURS</span>
 </div>
 <div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
 <span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-mins">59</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">MINUTES</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">MINUTES</span>
 </div>
 <div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
 <span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-neon-cyan tracking-tight transition-all" id="cd-secs">57</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">SECONDS</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">SECONDS</span>
 </div>
 </div>
 
@@ -558,69 +599,71 @@
 </p>
 </div>
 
-<!-- 4-Card Desktop Grid — directly on top of the circuit background -->
+<!-- 4-Card Desktop Grid — directly on top of the circuit background with distinct accents -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 
-<!-- Highlight Card 1: 24 Hours -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-cyan/50 group">
+<!-- Highlight Card 1: 24 Hours Sprint -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-cyan/50 group border-t-2 border-t-neon-cyan/70 shadow-[0_10px_30px_rgba(0,240,255,0.06)]">
 <div>
 <div class="w-11 h-11 rounded-xl bg-neon-cyan/10 border border-neon-cyan/30 flex items-center justify-center text-neon-cyan mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">SPRINT DURATION</span>
+<span class="text-[10px] font-mono tracking-widest text-slate-300 uppercase font-semibold">SPRINT DURATION</span>
 <h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">24 Hours</h3>
-<p class="text-xs text-slate-400 leading-relaxed">
-              Non-stop building, rapid prototyping, and real-time mentor feedback.
+<p class="text-xs text-slate-300 leading-relaxed">
+  Non-stop overnight building at CEC Main Auditorium with gigabit LAN, hardware maker space access, and midnight recharge fuel.
 </p>
 </div>
 </div>
 
-<!-- Highlight Card 2: Expert Mentors -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/50 group">
+<!-- Highlight Card 2: KSUM & Alumni Mentors -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/50 group border-t-2 border-t-purple-400/70 shadow-[0_10px_30px_rgba(138,43,226,0.06)]">
 <div>
 <div class="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">MENTORS</span>
-<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">Expert Mentors</h3>
-<p class="text-xs text-slate-400 leading-relaxed">
-              Top tier researchers, and technical alumni available in every session.
+<span class="text-[10px] font-mono tracking-widest text-slate-300 uppercase font-semibold">ECOSYSTEM GUIDANCE</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">KSUM &amp; Alumni Mentors</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+  Dedicated sprint triage with Kerala Startup Mission associates, CEC alumni founders, and technical architects throughout the night.
 </p>
 </div>
 </div>
 
-<!-- Highlight Card 3: Exciting Prizes -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-magenta/50 group">
+<!-- Highlight Card 3: ₹1,00,000+ & Grants -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 group border-t-2 border-t-amber-400/70 shadow-[0_10px_30px_rgba(245,158,11,0.06)]">
 <div>
-<div class="w-11 h-11 rounded-xl bg-neon-magenta/10 border border-neon-magenta/30 flex items-center justify-center text-neon-magenta mb-5 group-hover:scale-110 transition-transform">
+<div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">REWARDS</span>
-<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">Exciting Prizes</h3>
-<p class="text-xs text-slate-400 leading-relaxed">
-              Over $15,000+ across track cash pools, and fast-track incubator slots.
+<span class="text-[10px] font-mono tracking-widest text-slate-300 uppercase font-semibold">BOUNTIES &amp; SEED</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">₹1,00,000+ &amp; Grants</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+  Cash rewards across tracks, plus fast-track screening nominations for KSUM Idea Grants of up to ₹2 Lakhs per qualifying team.
 </p>
 </div>
 </div>
 
-<!-- Highlight Card 4: Open Tracks -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 group">
+<!-- Highlight Card 4: KTU Activity Points -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 group border-t-2 border-t-emerald-400/70 shadow-[0_10px_30px_rgba(52,211,153,0.06)]">
 <div>
-<div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-110 transition-transform">
+<div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 14l9-5-9-5-9 5 9 5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M12 14v7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">DOMAINS</span>
-<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">Open Tracks</h3>
-<p class="text-xs text-slate-400 leading-relaxed">
-              Build across AI/Data, Clean Tech, Fintech, Web3, and autonomous systems.
+<span class="text-[10px] font-mono tracking-widest text-slate-300 uppercase font-semibold">ACADEMIC RECOGNITION</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">KTU Activity Points</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+  Official certification issued by IEDC CEC, fully eligible for KTU student activity points and student innovation credits.
 </p>
 </div>
 </div>
@@ -669,18 +712,18 @@
 <div class="relative group">
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">09:00 AM</span>
-<h4 class="text-sm font-bold text-white mt-0.5">Check-in &amp; Hardware Setup</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Welcome kit, allocation of CEC Main Auditorium, network verification, and workstation configuration.
+<h4 class="text-sm font-bold text-white mt-0.5">CEC Auditorium Check-in &amp; Hardware Setup</h4>
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Badge collection at CEC Main Lobby, high-speed campus LAN setup, hardware component kits distribution, and maker bench allocation.
 </p>
 </div>
 
 <div class="relative group">
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">11:00 AM</span>
-<h4 class="text-sm font-bold text-white mt-0.5">Keynote &amp; Problem Statements Release</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Official kickoff by lead engineers, keynote address, and track matrix reveal.
+<h4 class="text-sm font-bold text-white mt-0.5">KSUM Keynote &amp; Problem Statements</h4>
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Inaugural address by CEC Principal and Kerala Startup Mission delegates. Live release of state problem statements and technical tracks.
 </p>
 </div>
 
@@ -688,8 +731,8 @@
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">01:00 PM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Hacking Commences &amp; Mentor Round 1</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Offline sprint kickoff. Product overview validation with industry mentors.
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Sprint begins! Initial idea feasibility review and architecture triage with CEC alumni founders and Kerala startup mentors.
 </p>
 </div>
 
@@ -697,8 +740,8 @@
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">08:00 PM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Mid-Sprint Evaluation &amp; Midnight Fuel</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Progress verification checkpoint, tech problem triage, catering and DJ power set.
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Faculty mentor checkpoint, hardware component debugging, traditional hot Kerala dinner, and midnight coffee energizers.
 </p>
 </div>
 </div>
@@ -723,9 +766,9 @@
 <div class="relative group">
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">04:00 AM</span>
-<h4 class="text-sm font-bold text-white mt-0.5">Debugging &amp; Final Roll Rush</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Technical assistance, CI/pipeline debugging checkpoint, smoke test runs on gates.
+<h4 class="text-sm font-bold text-white mt-0.5">Debugging &amp; Hardware Smoke Tests</h4>
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Circuit soldering, sensor calibration, API testing, and final deck tuning with night-shift mentor support.
 </p>
 </div>
 
@@ -733,26 +776,26 @@
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">09:00 AM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Code Freeze &amp; Submission Deadline</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Git repositories committed, pitch decks submitted, live test demonstrations.
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Git repositories submitted, video demos recorded, and functional prototypes placed on evaluation tables.
 </p>
 </div>
 
 <div class="relative group">
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">11:00 AM</span>
-<h4 class="text-sm font-bold text-white mt-0.5">Finalist Pitches to Investor Jury</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Top 12 teams pitch on the grand stage to five venture partners, Q&amp;A rounds with the panel.
+<h4 class="text-sm font-bold text-white mt-0.5">Finalist Pitches to KSUM Jury</h4>
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Top 12 qualifying squads pitch on the CEC Auditorium stage before Kerala Startup Mission evaluators, angel investors, and faculty judges.
 </p>
 </div>
 
 <div class="relative group">
 <div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">03:00 PM</span>
-<h4 class="text-sm font-bold text-white mt-0.5">Award Ceremony &amp; Grand Reveal</h4>
-<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
-                Winner revelation, valedictory by IEDC CEC, cash prize transfers, partner representatives.
+<h4 class="text-sm font-bold text-white mt-0.5">Valedictory &amp; KSUM Grant Handover</h4>
+<p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
+  Trophy presentations, ₹1,00,000+ cash prizes, KSUM pre-incubation letters, and KTU activity point certificates distribution.
 </p>
 </div>
 </div>
@@ -762,12 +805,58 @@
 </div>
 </section>
 <!-- END: SprintTimeline -->
+<!-- ============================================================
+     CAMPUS VOICES / STUDENT INNOVATOR SPOTLIGHT
+============================================================ -->
+<section class="circuit-section-bg py-12 sm:py-16 scroll-mt-20 relative" data-purpose="student-spotlight" id="stories">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="cyber-card rounded-2xl sm:rounded-3xl p-6 sm:p-9 border border-amber-400/30 bg-gradient-to-br from-cosmic-950/95 via-cosmic-900/90 to-amber-950/20 relative overflow-hidden shadow-2xl">
+      <!-- Ambient Warm Glow -->
+      <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
+      
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-6 relative z-10">
+        <div class="shrink-0 flex flex-col items-center">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-amber-500/20 via-neon-cyan/20 to-purple-500/20 border-2 border-amber-400/50 p-1 flex items-center justify-center text-2xl font-display font-black text-white shadow-lg">
+            AK
+          </div>
+          <span class="mt-2 text-[9px] font-mono uppercase tracking-widest text-amber-300 font-bold px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-400/30">
+            ALUMNI FOUNDER
+          </span>
+        </div>
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="text-amber-400 text-xl font-display">“</span>
+            <span class="text-[10px] font-mono tracking-widest uppercase text-slate-300 font-bold">FROM CEC MAKER LAB TO STARTUP IN KERALA</span>
+          </div>
+          
+          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed italic">
+            "Idea Sprint was where our real journey started. In the CEC electronics lab at 2 AM, the mentors from KSUM helped us pivot our AgriTech sensor prototype. That prototype won the campus sprint, secured the KSUM Idea Grant, and is now an incubated startup in Kerala. Build fearlessly, talk to every mentor, and turn your 24 hours into a real venture."
+          </p>
+          
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-white/10 text-xs">
+            <div>
+              <span class="font-display font-bold text-white">Anandhu Krishna</span>
+              <span class="text-slate-300 font-mono text-xs"> — Co-Founder, AgroSensor (CEC Batch of '24)</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 font-semibold">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>KSUM Idea Grant Recipient</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: StudentSpotlight -->
+
 
 
 <!-- ============================================================
      IDEA GENERATOR — Embedded directly inside circuit background
 ============================================================ -->
-<section class="circuit-section-bg py-14 sm:py-20 scroll-mt-20" data-purpose="idea-generator" id="generator">
+<section class="circuit-section-bg py-14 sm:py-20 scroll-mt-20" data-purpose="idea-generator" id="generator" role="region" aria-label="Interactive Idea Generator">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
 <!-- Section Header with Badge -->
@@ -827,7 +916,7 @@
 <div class="bg-cosmic-950/95 rounded-xl p-5 sm:p-6 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all" id="synthesized-box">
 <div class="space-y-1.5">
 <span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase font-semibold">SYNTHESIZED PROBLEM STATEMENT</span>
-<p class="text-sm sm:text-base font-medium text-white max-w-2xl leading-snug transition-all" id="synthesized-text">
+<p class="text-sm sm:text-base font-medium text-white max-w-2xl leading-snug transition-all" id="synthesized-text" aria-live="polite" aria-atomic="true">
               Can we build <span class="text-neon-cyan font-semibold" id="st-domain">Autonomous Mobility</span> leveraging <span class="text-purple-300 font-semibold" id="st-tech">Computer Vision + LLMs</span> for <span class="text-pink-300 font-semibold" id="st-context">Rural Clinics</span>?
 </p>
 </div>
@@ -879,7 +968,7 @@
 </label>
 <span class="text-xs font-mono text-slate-400">(Team Lead)</span>
 </div>
-<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="lead-name" name="lead_name" autocomplete="name" placeholder="e.g. Ananya Nair" type="text" required>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="lead-name" name="lead_name" autocomplete="name" placeholder="e.g. Ananya Nair" type="text" required aria-required="true">
 </div>
 
 <!-- Email Address & Mobile Number in 2 columns -->
@@ -888,42 +977,54 @@
 <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="college-email">
           Email Address <span class="text-amber-400">*</span>
 </label>
-<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="college-email" name="college_email" autocomplete="email" placeholder="name@college.edu" type="email" required>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="college-email" name="college_email" autocomplete="email" placeholder="name@college.edu" type="email" required aria-required="true">
 </div>
 
 <div class="space-y-1.5">
 <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="contact-phone">
           Mobile Number <span class="text-amber-400">*</span>
 </label>
-<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="contact-phone" name="contact_phone" autocomplete="tel" placeholder="e.g. 9876543210" type="tel" required>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="contact-phone" name="contact_phone" autocomplete="tel" placeholder="e.g. 9876543210" type="tel" required aria-required="true">
 </div>
 </div>
 </div>
 
-<!-- 02 ACADEMIC BACKGROUND -->
+<!-- 02 ACADEMIC BACKGROUND & KTU CERTIFICATION -->
 <div class="space-y-4 pt-2">
 <div class="flex items-center gap-2.5 pb-2.5 border-b border-dashed border-white/10">
 <span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-mono font-bold text-xs">02</span>
 <h3 class="text-xs sm:text-sm font-mono font-bold tracking-widest uppercase text-white">
-        ACADEMIC BACKGROUND
+        ACADEMIC BACKGROUND &amp; KTU CERTIFICATION
 </h3>
 </div>
 
-<!-- College / Institution Name -->
+<!-- College / Institution Name & KTU Reg ID in 2 columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div class="space-y-1.5">
-<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="institution-name">
-        College / Institution Name <span class="text-amber-400">*</span>
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-200" for="institution-name">
+        College / Institution <span class="text-amber-400">*</span>
 </label>
-<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="institution-name" name="institution_name" autocomplete="organization" placeholder="e.g. College of Engineering Chengannur" type="text" required>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="institution-name" name="institution_name" autocomplete="organization" placeholder="e.g. College of Engineering Chengannur" type="text" required aria-required="true">
+</div>
+
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-200" for="ktu-reg">
+        KTU Reg / Roll No.
+</label>
+<span class="text-xs font-mono text-emerald-400 font-semibold">(For Activity Points)</span>
+</div>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="ktu-reg" name="ktu_reg" placeholder="e.g. CEC22CS042" type="text" aria-required="false">
+</div>
 </div>
 
 <!-- Academic Year & Department / Branch in 2 columns -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div class="space-y-1.5">
-<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="lead-year">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-200" for="lead-year">
           Academic Year <span class="text-amber-400">*</span>
 </label>
-<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="lead-year" name="lead_year" required>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="lead-year" name="lead_year" required aria-required="true">
 <option value="" disabled selected class="bg-cosmic-950 text-slate-500">Select Academic Year...</option>
 <option value="1st Year" class="bg-cosmic-950 text-white">1st Year (Freshman)</option>
 <option value="2nd Year" class="bg-cosmic-950 text-white">2nd Year (Sophomore)</option>
@@ -934,10 +1035,10 @@
 </div>
 
 <div class="space-y-1.5">
-<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="lead-dept">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-200" for="lead-dept">
           Department / Branch <span class="text-amber-400">*</span>
 </label>
-<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="lead-dept" name="lead_dept" required>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="lead-dept" name="lead_dept" required aria-required="true">
 <option value="" disabled selected class="bg-cosmic-950 text-slate-500">Select Department...</option>
 <option value="Computer Science & Engineering" class="bg-cosmic-950 text-white">Computer Science & Engineering (CSE)</option>
 <option value="Electronics & Communication" class="bg-cosmic-950 text-white">Electronics & Communication (ECE)</option>
@@ -967,7 +1068,7 @@
 <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="team-size">
           Team Size <span class="text-amber-400">*</span>
 </label>
-<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="team-size" name="team_size" required>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="team-size" name="team_size" required aria-required="true">
 <option value="1 Candidate (Solo)" class="bg-cosmic-950 text-white">1 Candidate (Solo)</option>
 <option value="2 Candidates (Duo)" class="bg-cosmic-950 text-white">2 Candidates (Duo)</option>
 <option value="3 Candidates (Trio)" class="bg-cosmic-950 text-white">3 Candidates (Trio)</option>
@@ -991,7 +1092,7 @@
 <label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="track-preference">
         Track Preference <span class="text-amber-400">*</span>
 </label>
-<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="track-preference" name="track_preference" required>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="track-preference" name="track_preference" required aria-required="true">
 <option value="" disabled selected class="bg-cosmic-950 text-slate-500">Select a sprint track...</option>
 <option value="Artificial Intelligence & Autonomous Systems" class="bg-cosmic-950 text-white">Artificial Intelligence &amp; Autonomous Systems</option>
 <option value="Fintech & Decentralized Web3" class="bg-cosmic-950 text-white">Fintech &amp; Decentralized Web3</option>
@@ -1015,7 +1116,7 @@
 <!-- Code of Conduct Checkbox -->
 <div class="pt-2">
 <label class="flex items-start gap-3 cursor-pointer group">
-<input type="checkbox" id="conduct-agree" name="conduct_agree" required class="mt-1 w-4 h-4 rounded border-white/20 bg-cosmic-950 text-neon-cyan focus:ring-neon-cyan focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer">
+<input type="checkbox" id="conduct-agree" name="conduct_agree" required aria-required="true" class="mt-1 w-4 h-4 rounded border-white/20 bg-cosmic-950 text-neon-cyan focus:ring-neon-cyan focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer">
 <span class="text-xs text-slate-300 leading-relaxed group-hover:text-white transition-colors">
           I agree to the <span class="text-white font-semibold">IEDC Code of Conduct</span>, confirm that all submissions will be created during the 24-hour sprint, and acknowledge adherence to campus guidelines. <span class="text-amber-400">*</span>
 </span>
@@ -1109,56 +1210,91 @@
 <footer class="circuit-section-bg-alt pt-12 pb-8 relative z-10" data-purpose="site-footer" role="contentinfo">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-white/10">
-      <!-- Left Column: IEDC Info with logo image -->
+      <!-- Left Column: IEDC & KSUM Dual Brand Identity -->
       <div class="lg:col-span-5 space-y-4">
-        <div class="flex items-center gap-3">
-          <picture>
-            <source srcset="iedc-logo.webp" type="image/webp">
-            <img
-              src="iedc-logo.png"
-              alt="IEDC Bootcamp CEC Logo"
-              width="65"
-              height="36"
-              loading="lazy"
-              decoding="async"
-              class="footer-logo-img"
-            />
-          </picture>
+        <!-- Dual Brand Identity Logos: IEDC + KSUM (High-Contrast White Pill) -->
+        <div class="flex flex-wrap items-center gap-3.5">
+          <a href="https://www.iedcbootcampcec.org/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 group" aria-label="IEDC Bootcamp CEC">
+            <picture>
+              <source srcset="iedc-logo.webp" type="image/webp">
+              <img
+                src="iedc-logo.png"
+                alt="IEDC Bootcamp CEC Logo"
+                width="65"
+                height="36"
+                loading="lazy"
+                decoding="async"
+                class="footer-logo-img group-hover:opacity-100 transition-opacity"
+              />
+            </picture>
+          </a>
+          <span class="text-slate-500 font-mono text-xs hidden sm:inline" aria-hidden="true">✕</span>
+          <!-- Official Kerala Startup Mission Logo Badge -->
+          <a href="https://startupmission.kerala.gov.in/" target="_blank" rel="noopener noreferrer" class="bg-white px-3 py-1.5 rounded-xl inline-flex items-center shadow-md hover:shadow-glow-cyan hover:scale-105 transition-all border border-slate-200/30 group" aria-label="Kerala Startup Mission (KSUM) Official Website">
+            <picture>
+              <source srcset="ksum-logo.webp" type="image/webp">
+              <img
+                src="ksum-logo.png"
+                alt="Kerala Startup Mission - Government of Kerala"
+                width="110"
+                height="32"
+                loading="lazy"
+                decoding="async"
+                class="h-7 w-auto object-contain block"
+              />
+            </picture>
+          </a>
         </div>
+
         <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
-          Innovation and Entrepreneurship Development Centre at College of Engineering Chengannur. Fostering bold technological venture creation, transformative deep-tech research, and high-impact hackathons.
+          Innovation and Entrepreneurship Development Centre (IEDC) at <span class="text-white font-semibold">College of Engineering Chengannur</span>, operating under the aegis of <span class="text-white font-semibold">Kerala Startup Mission (KSUM)</span> and <span class="text-white font-semibold">APJ Abdul Kalam Technological University (KTU)</span>. Fostering grassroots campus innovation, deep-tech research, and student-founded startups.
         </p>
-        <div class="inline-flex items-center gap-2 text-[10px] font-mono text-slate-400 pt-1">
-          <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-          </svg>
-          <span>9.3174° N, 76.6171° E • CHENGANNUR, KERALA</span>
+
+        <div class="space-y-1.5 pt-1">
+          <div class="inline-flex items-center gap-2 text-[10px] font-mono text-slate-300">
+            <svg class="w-3.5 h-3.5 text-neon-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <span>9.3174° N, 76.6171° E • CHENGANNUR, KERALA</span>
+          </div>
+          <p class="text-[10px] font-mono text-slate-400">
+            Incubation Cell, College of Engineering Chengannur, Kerala - 689121
+          </p>
         </div>
       </div>
-      <!-- Middle Column: Microsite Tracks -->
+
+      <!-- Middle Column: Microsite Tracks & Navigation -->
       <div class="lg:col-span-3 space-y-3">
-        <h4 class="text-[11px] font-mono font-bold tracking-widest uppercase text-white">MICROSITE TRACKS</h4>
-        <ul class="space-y-2 text-xs text-slate-300">
-          <li><a href="#highlights" class="hover:text-neon-cyan transition-colors">Event Architecture</a></li>
-          <li><a href="#highlights" class="hover:text-neon-cyan transition-colors">Prize Bounty Pool</a></li>
+        <h4 class="text-[11px] font-mono font-bold tracking-widest uppercase text-white">MICROSITE NAVIGATION</h4>
+        <ul class="space-y-2 text-xs text-slate-300 font-medium">
+          <li><a href="#highlights" class="hover:text-neon-cyan transition-colors">Event Highlights &amp; Tracks</a></li>
           <li><a href="#timeline" class="hover:text-neon-cyan transition-colors">24-Hour Sprint Timeline</a></li>
+          <li><a href="#stories" class="hover:text-neon-cyan transition-colors">Student Innovation Stories</a></li>
           <li><a href="#generator" class="hover:text-neon-cyan transition-colors">AI Problem Generator</a></li>
-          <li><a href="#apply" class="hover:text-neon-cyan transition-colors">Team Registration</a></li>
+          <li><a href="#apply" class="hover:text-neon-cyan transition-colors">Team Registration &amp; Pass</a></li>
+          <li><a href="#faq" class="hover:text-neon-cyan transition-colors">Frequently Asked Questions</a></li>
         </ul>
       </div>
-      <!-- Right Column: Terminal Nexus -->
+
+      <!-- Right Column: Campus Helpdesk & Official Connect -->
       <div class="lg:col-span-4 space-y-3">
-        <h4 class="text-[11px] font-mono font-bold tracking-widest uppercase text-white">TERMINAL NEXUS</h4>
-        <div class="space-y-2 text-xs text-slate-300">
+        <h4 class="text-[11px] font-mono font-bold tracking-widest uppercase text-white">CAMPUS HELPDESK &amp; CONNECT</h4>
+        <div class="space-y-2.5 text-xs text-slate-300">
           <div class="flex items-center gap-2.5">
-            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 text-neon-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
-            <a href="mailto:iedc@ceconline.edu" class="hover:text-neon-cyan transition-colors">iedc@ceconline.edu</a>
+            <a href="mailto:iedc@ceconline.edu" class="hover:text-neon-cyan transition-colors font-mono">iedc@ceconline.edu</a>
           </div>
           <div class="flex items-center gap-2.5">
-            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <span class="font-mono text-slate-200">+91 94474 12345 (IEDC Helpline)</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-3.5 h-3.5 text-neon-cyan shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 0-3.06 1.53 1.53 0 0 0 0 3.06m1.4 9.74v-8.37H5.06v8.37z"></path>
             </svg>
             <a href="https://www.linkedin.com/company/iedcbootcampcec" target="_blank" rel="noopener noreferrer" class="hover:text-neon-cyan transition-colors">linkedin.com/company/iedcbootcampcec</a>
@@ -1167,38 +1303,48 @@
             <svg class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
             </svg>
-            <span>College of Engineering Chengannur, Kerala - 689121</span>
+            <span class="text-slate-300">College of Engineering Chengannur, Kerala - 689121</span>
           </div>
         </div>
+
+        <!-- Social Media Icons Row -->
         <div class="flex items-center gap-2 pt-2">
           <!-- LinkedIn Official Link -->
-          <a href="https://www.linkedin.com/company/iedcbootcampcec" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="LinkedIn - IEDC Bootcamp CEC">
+          <a href="https://www.linkedin.com/company/iedcbootcampcec" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 hover:scale-110 transition-all" aria-label="LinkedIn - IEDC Bootcamp CEC">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 0-3.06 1.53 1.53 0 0 0 0 3.06m1.4 9.74v-8.37H5.06v8.37z"></path>
             </svg>
           </a>
-          <a href="https://www.iedcbootcampcec.org/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="Official Website">
+          <!-- Instagram Official Link -->
+          <a href="https://www.instagram.com/iedcbootcampcec" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 hover:scale-110 transition-all" aria-label="Instagram - IEDC Bootcamp CEC">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+            </svg>
+          </a>
+          <!-- Official Website -->
+          <a href="https://www.iedcbootcampcec.org/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 hover:scale-110 transition-all" aria-label="Official Website - IEDC Bootcamp CEC">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
           </a>
-          <a href="#" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="YouTube">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <!-- KSUM Portal -->
+          <a href="https://startupmission.kerala.gov.in/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 hover:scale-110 transition-all" aria-label="Kerala Startup Mission Portal">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
           </a>
-          <a href="#" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="Community Chat">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
-          </a>
-          <a href="#" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="Source Code">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          <!-- GitHub Repo -->
+          <a href="https://github.com/Code-Wanderer07/iedc-idea-sprint-2026-Mock" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 hover:scale-110 transition-all" aria-label="GitHub Repository">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
           </a>
         </div>
       </div>
     </div>
-    <!-- Bottom Bar -->
-    <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] font-mono text-slate-400">
-      <div>© 2026 IEDC BOOTCAMP CEC. ENGINEERED FOR IDEA SPRINT 2026. ALL RIGHTS RESERVED.</div>
-      <div class="flex items-center gap-6">
-        <a href="#" class="hover:text-neon-cyan transition-colors uppercase">TERMS</a>
-        <a href="#" class="hover:text-neon-cyan transition-colors uppercase">CODE OF CONDUCT</a>
-        <a href="#" class="hover:text-neon-cyan transition-colors uppercase">SECURITY</a>
+
+    <!-- Bottom Legal / Accreditation Bar -->
+    <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] font-mono text-slate-300">
+      <div>© 2026 IEDC BOOTCAMP CEC • SUPPORTED BY KERALA STARTUP MISSION (KSUM). ALL RIGHTS RESERVED.</div>
+      <div class="flex flex-wrap items-center gap-6">
+        <a href="#home" class="hover:text-neon-cyan transition-colors uppercase">BACK TO TOP</a>
+        <a href="#faq" class="hover:text-neon-cyan transition-colors uppercase">CODE OF CONDUCT</a>
+        <a href="https://startupmission.kerala.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-neon-cyan transition-colors uppercase">KSUM POLICIES</a>
+        <a href="https://www.ceconline.edu" target="_blank" rel="noopener noreferrer" class="hover:text-neon-cyan transition-colors uppercase">CEC OFFICIAL</a>
       </div>
     </div>
   </div>
@@ -1240,7 +1386,7 @@
           <h4 class="text-xl sm:text-2xl font-display font-black text-white tracking-wide mt-0.5">
             IDEA SPRINT <span class="text-neon-cyan">'26</span>
           </h4>
-          <p class="text-[10px] text-slate-400 font-mono tracking-wider">NATIONAL UNIVERSITY INNOVATION SPRINT</p>
+          <p class="text-[10px] text-slate-300 font-mono tracking-wider">IEDC BOOTCAMP CEC • SUPPORTED BY KSUM &amp; KTU</p>
         </div>
         <div class="text-right">
           <span class="px-2.5 py-1 rounded-full text-[9px] font-mono font-bold text-white bg-gradient-to-r from-neon-blue to-neon-cyan shadow-glow-cyan uppercase">
@@ -1636,6 +1782,7 @@
     const leadDeptSelect = document.getElementById('lead-dept');
     const teamSizeSelect = document.getElementById('team-size');
     const trackPrefSelect = document.getElementById('track-preference');
+    const ktuRegInput = document.getElementById('ktu-reg');
     const ideaBriefInput = document.getElementById('idea-brief');
     const titleEl = document.getElementById('success-team-name');
     const msgEl = document.getElementById('success-message');
