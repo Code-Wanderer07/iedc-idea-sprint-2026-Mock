@@ -1,0 +1,1763 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Idea Sprint '26 — National University Innovation Sprint | IEDC Bootcamp CEC</title>
+
+<!-- Primary SEO Meta Tags -->
+<meta name="description" content="Idea Sprint '26 — A 48-Hour National University Innovation Sprint hosted by IEDC Bootcamp CEC at College of Engineering Chengannur. 24-hour hackathon, cash prizes, and venture incubation.">
+<meta name="keywords" content="Idea Sprint 2026, IEDC CEC, College of Engineering Chengannur, Hackathon Kerala, National Innovation Sprint, Tech Hackathon">
+<meta name="author" content="IEDC Bootcamp CEC">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#04060d">
+<link rel="canonical" href="http://localhost:3000/">
+
+<!-- Open Graph / Social Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:3000/">
+<meta property="og:title" content="Idea Sprint '26 — National University Innovation Sprint | IEDC Bootcamp CEC">
+<meta property="og:description" content="48-Hour National University Innovation Sprint by IEDC Bootcamp CEC. Register your team and build breakthrough technology solutions.">
+<meta property="og:image" content="hero-bg.webp">
+<meta property="og:site_name" content="Idea Sprint '26">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Idea Sprint '26 — National University Innovation Sprint">
+<meta name="twitter:description" content="48-Hour National University Innovation Sprint by IEDC Bootcamp CEC. Register your team now.">
+<meta name="twitter:image" content="hero-bg.webp">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Preload Hero LCP Background Image -->
+<link rel="preload" as="image" href="hero-bg.webp" type="image/webp" fetchpriority="high">
+
+<!-- Google Fonts & Resource Preconnects -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com" rel="dns-prefetch">
+<link href="https://fonts.gstatic.com" rel="dns-prefetch">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Orbitron', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace'],
+          },
+          colors: {
+            cosmic: {
+              950: '#04060d',
+              900: '#070913',
+              850: '#0a0d1d',
+              800: '#0f142b',
+              700: '#151c3d',
+            },
+            neon: {
+              cyan: '#00f0ff',
+              blue: '#0055ff',
+              magenta: '#ff0055',
+              purple: '#8a2be2',
+            }
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 25px -5px rgba(0, 240, 255, 0.45)',
+            'glow-purple': '0 0 35px -5px rgba(138, 43, 226, 0.4)',
+            'glow-magenta': '0 0 25px -5px rgba(255, 0, 85, 0.45)',
+            'glass-card': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Cyberpunk & Exact Background Overlay Styling -->
+<style data-purpose="custom-cyberpunk-visuals">
+    /* Subtle grid overlay */
+    .cyber-grid {
+      background-size: 50px 50px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    
+    /* Cosmic glow gradients */
+    .hero-glow-left {
+      background: radial-gradient(circle 500px at 0% 15%, rgba(0, 85, 255, 0.22), rgba(0, 240, 255, 0.10) 40%, transparent 70%);
+    }
+    .hero-glow-right {
+      background: radial-gradient(circle 550px at 100% 20%, rgba(255, 0, 85, 0.22), rgba(138, 43, 226, 0.12) 45%, transparent 75%);
+    }
+
+    /* Circuit aesthetic lines */
+    .circuit-border-left {
+      background: linear-gradient(180deg, transparent, rgba(0, 85, 255, 0.5) 20%, rgba(0, 240, 255, 0.8) 50%, rgba(255, 0, 85, 0.6) 80%, transparent);
+    }
+    .circuit-border-right {
+      background: linear-gradient(180deg, transparent, rgba(255, 0, 85, 0.6) 20%, rgba(138, 43, 226, 0.8) 50%, rgba(0, 85, 255, 0.5) 80%, transparent);
+    }
+    
+    /* Card glass surface */
+    .cyber-card {
+      background: rgba(13, 17, 36, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .cyber-card:hover {
+      border-color: rgba(0, 240, 255, 0.4);
+    }
+
+    /* ── EXACT HERO SECTION SPECIFICATION ── */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url("hero-bg.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 1.5rem 3rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 5% 20%, rgba(0, 100, 255, 0.20), transparent 45%),
+                  radial-gradient(ellipse at 95% 85%, rgba(255, 0, 65, 0.20), transparent 45%);
+      animation: ambientGlow 6s ease-in-out infinite alternate;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(110deg, rgba(0, 100, 255, 0.04), transparent 45%, rgba(255, 0, 70, 0.06)),
+        linear-gradient(to bottom, transparent 65%, #04060d 99%);
+      animation: lightPulse 4s ease-in-out infinite alternate;
+    }
+    @keyframes ambientGlow {
+      0% { opacity: 0.5; filter: blur(15px); }
+      100% { opacity: 1; filter: blur(35px); }
+    }
+    @keyframes lightPulse {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+    @media (max-width: 768px) {
+      .hero { min-height: 100svh; background-position: center; padding-top: 5.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero::before, .hero::after { animation: none; }
+    }
+
+    /* ── SEAMLESS CIRCUIT BACKGROUNDS WITH FEATHERED GRADIENTS ── */
+    .hero-bottom-blend {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 180px;
+      background: linear-gradient(
+        to bottom,
+        rgba(4, 6, 13, 0) 0%,
+        rgba(4, 6, 13, 0.4) 40%,
+        rgba(4, 6, 13, 0.88) 75%,
+        #04060d 100%
+      );
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .highlights-top-blend {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(
+        to top,
+        rgba(4, 6, 13, 0) 0%,
+        rgba(4, 6, 13, 0.5) 45%,
+        rgba(4, 6, 13, 0.9) 80%,
+        #04060d 100%
+      );
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .circuit-section-bg {
+      background-color: #04060d;
+      position: relative;
+      isolation: isolate;
+    }
+    .circuit-section-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: url("section-bg.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.85;
+      pointer-events: none;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+    }
+
+    .circuit-section-bg-alt {
+      background-color: #04060d;
+      position: relative;
+      isolation: isolate;
+    }
+    .circuit-section-bg-alt::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: url("section-bg.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.85;
+      pointer-events: none;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);
+    }
+
+    /* ── IDEA GENERATOR CYBERNETIC ANIMATIONS ── */
+    .generator-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .generator-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 240, 255, 0.07),
+        rgba(255, 0, 85, 0.05),
+        transparent
+      );
+      transform: skewX(-20deg);
+      animation: cyberSweep 6s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes cyberSweep {
+      0%, 65% { left: -120%; opacity: 0; }
+      75% { opacity: 1; }
+      100% { left: 220%; opacity: 0; }
+    }
+
+    /* Core Tech Card breathing pulse */
+    .active-tech-glow {
+      animation: coreTechPulse 2.8s ease-in-out infinite alternate;
+    }
+    @keyframes coreTechPulse {
+      0% {
+        box-shadow: 0 0 15px -3px rgba(0, 240, 255, 0.35), inset 0 0 12px -4px rgba(0, 240, 255, 0.2);
+        border-color: rgba(0, 240, 255, 0.65);
+      }
+      100% {
+        box-shadow: 0 0 28px 2px rgba(0, 240, 255, 0.65), inset 0 0 20px -2px rgba(0, 240, 255, 0.35);
+        border-color: rgba(0, 240, 255, 1);
+      }
+    }
+
+    /* Card interactive hover lifts */
+    .card-matrix {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-matrix:hover {
+      transform: translateY(-3px) scale(1.015);
+    }
+
+    /* Text slot-machine rolling animation */
+    .slot-rolling {
+      animation: slotGlitch 0.07s linear infinite;
+      filter: blur(1.5px);
+      opacity: 0.8;
+      color: #00f0ff !important;
+    }
+    @keyframes slotGlitch {
+      0% { transform: translateY(-3px); }
+      50% { transform: translateY(3px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Lock-in impact flash */
+    .card-lock-impact {
+      animation: lockImpact 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes lockImpact {
+      0% {
+        transform: scale(0.94);
+        filter: brightness(2);
+        box-shadow: 0 0 25px rgba(0, 240, 255, 0.9);
+      }
+      60% {
+        transform: scale(1.03);
+      }
+      100% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
+    }
+
+    /* Shuffle icon spin */
+    .shuffle-spinning {
+      animation: spinShuffle 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    @keyframes spinShuffle {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Synthesized statement update highlight sweep */
+    .synth-glow-pulse {
+      animation: synthBoxFlash 0.65s ease-out;
+    }
+    @keyframes synthBoxFlash {
+      0% {
+        background-color: rgba(0, 85, 255, 0.22);
+        border-color: rgba(0, 240, 255, 0.85);
+        box-shadow: 0 0 30px -3px rgba(0, 240, 255, 0.5);
+      }
+      100% {
+        background-color: rgba(4, 6, 13, 0.95);
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    /* ── NAVBAR & FOOTER LOGO IMAGES ── */
+    .nav-logo-img {
+      height: 38px;
+      width: auto;
+      aspect-ratio: 1024 / 571;
+      filter: brightness(0) invert(1);
+      display: block;
+    }
+    .footer-logo-img {
+      height: 36px;
+      width: auto;
+      aspect-ratio: 1024 / 571;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+      display: block;
+    }
+
+    /* ── CONFIRMED TICKET MODAL ANIMATION ── */
+    @keyframes ticketModalPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(18px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+    .ticket-modal-animate {
+      animation: ticketModalPop 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @media print {
+      body * { visibility: hidden; }
+      #ticket-modal, #ticket-modal * { visibility: visible; }
+      #ticket-modal { position: absolute; inset: 0; background: white; color: black; }
+      #close-ticket-btn, #print-ticket-btn, #dismiss-ticket-btn { display: none !important; }
+    }
+  </style>
+<!-- END: Custom Cyberpunk & Glassmorphism Styling -->
+</head>
+<body class="bg-cosmic-950 text-slate-100 font-body selection:bg-neon-cyan selection:text-black min-h-screen relative overflow-x-hidden antialiased">
+<!-- Skip to Main Content Link for Keyboard Accessibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-neon-cyan focus:text-slate-950 focus:font-mono focus:font-bold focus:rounded-xl focus:shadow-glow-cyan focus:outline-none">
+  Skip to main content
+</a>
+
+<!-- Ambient Background Accents -->
+<div class="fixed inset-0 cyber-grid pointer-events-none z-0"></div>
+<div class="fixed inset-0 hero-glow-left pointer-events-none z-0"></div>
+<div class="fixed inset-0 hero-glow-right pointer-events-none z-0"></div>
+<!-- Circuit Side Visual Runners (Desktop decorative borders) -->
+<div class="hidden 2xl:block fixed left-4 top-0 bottom-0 w-px circuit-border-left pointer-events-none z-10 opacity-70"></div>
+<div class="hidden 2xl:block fixed right-4 top-0 bottom-0 w-px circuit-border-right pointer-events-none z-10 opacity-70"></div>
+
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300" id="main-header" data-purpose="site-navigation" role="banner">
+<div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 sm:h-24 flex items-center justify-between">
+<!-- Brand Logo: using provided IEDC Bootcamp CEC WebP with PNG fallback -->
+<a class="flex items-center gap-3 group shrink-0" href="#" aria-label="IEDC Bootcamp CEC Home">
+  <picture>
+    <source srcset="iedc-logo.webp" type="image/webp">
+    <img
+      src="iedc-logo.png"
+      alt="IEDC Bootcamp CEC Logo"
+      width="68"
+      height="38"
+      loading="eager"
+      decoding="async"
+      class="nav-logo-img group-hover:opacity-80 transition-opacity"
+    />
+  </picture>
+</a>
+
+<!-- Right-Aligned Nav Group: Desktop Links + CTA + Mobile Hamburger -->
+<div class="flex items-center gap-3 sm:gap-6 lg:gap-8">
+  <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs sm:text-sm font-medium text-slate-300 tracking-wide" aria-label="Primary navigation">
+    <a class="hover:text-neon-cyan transition-colors" href="#highlights">Highlights</a>
+    <a class="hover:text-neon-cyan transition-colors" href="#timeline">Timeline</a>
+    <a class="hover:text-neon-cyan transition-colors" href="#generator">Idea Generator</a>
+    <a class="hover:text-neon-cyan transition-colors" href="#apply">Registration</a>
+    <a class="hover:text-neon-cyan transition-colors" href="#faq">FAQ</a>
+  </nav>
+
+  <!-- Header Action CTA -->
+  <a class="hidden sm:inline-flex items-center justify-center px-5 sm:px-6 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-neon-cyan transition-all duration-300 shadow-md hover:shadow-glow-cyan transform hover:-translate-y-0.5" href="#apply">
+    CLAIM YOUR PASS
+  </a>
+
+  <!-- Mobile Hamburger Menu Button -->
+  <button id="mobile-menu-toggle" type="button" class="md:hidden w-10 h-10 rounded-xl bg-cosmic-900/90 border border-white/15 flex flex-col items-center justify-center gap-1.5 text-slate-200 hover:text-neon-cyan hover:border-neon-cyan/50 focus:outline-none transition-all cursor-pointer" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-menu">
+    <span class="w-5 h-0.5 bg-current rounded-full transition-all duration-300 transform origin-center" id="hamburger-bar-1"></span>
+    <span class="w-5 h-0.5 bg-current rounded-full transition-all duration-300" id="hamburger-bar-2"></span>
+    <span class="w-5 h-0.5 bg-current rounded-full transition-all duration-300 transform origin-center" id="hamburger-bar-3"></span>
+  </button>
+</div>
+</div>
+
+<!-- Mobile Navigation Drawer / Dropdown -->
+<div id="mobile-nav-menu" class="hidden md:hidden fixed inset-x-0 top-20 sm:top-24 bg-cosmic-950/95 backdrop-blur-xl border-b border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.8)] p-5 space-y-3 z-40 transition-all duration-300" aria-label="Mobile Navigation">
+  <nav class="flex flex-col space-y-2 font-mono text-xs sm:text-sm tracking-wide">
+    <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#highlights">
+      <span>Highlights</span>
+      <span class="text-xs text-neon-cyan font-bold">01</span>
+    </a>
+    <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#timeline">
+      <span>Timeline</span>
+      <span class="text-xs text-neon-cyan font-bold">02</span>
+    </a>
+    <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#generator">
+      <span>Idea Generator</span>
+      <span class="text-xs text-neon-cyan font-bold">03</span>
+    </a>
+    <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#apply">
+      <span>Registration</span>
+      <span class="text-xs text-neon-cyan font-bold">04</span>
+    </a>
+    <a class="mobile-nav-link flex items-center justify-between p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] hover:text-neon-cyan transition-colors text-slate-200" href="#faq">
+      <span>FAQ</span>
+      <span class="text-xs text-neon-cyan font-bold">05</span>
+    </a>
+  </nav>
+  <div class="pt-2 border-t border-white/10">
+    <a class="mobile-nav-link w-full py-3 px-6 rounded-xl bg-gradient-to-r from-neon-cyan via-cyan-400 to-neon-blue text-slate-950 font-mono text-xs font-black uppercase tracking-widest text-center shadow-glow-cyan flex items-center justify-center gap-2" href="#apply">
+      <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      CLAIM YOUR PASS
+    </a>
+  </div>
+</div>
+</header>
+<!-- END: MainHeader -->
+
+<main class="relative z-10" id="main-content" role="main">
+
+<!-- ============================================================
+     HERO SECTION — Content overlays directly on hero-bg.png
+     (Between glowing bulb on top-left and runner on bottom-right)
+============================================================ -->
+<section class="hero text-center" data-purpose="hero-banner" id="home">
+<div class="max-w-4xl mx-auto w-full flex flex-col items-center justify-center relative z-30">
+
+<!-- Main Headline -->
+<h1 class="text-3xl sm:text-5xl lg:text-7xl font-display font-black tracking-tight uppercase text-white leading-tight drop-shadow-md">
+        IDEA SPRINT <span class="bg-gradient-to-r from-white via-cyan-200 to-neon-cyan bg-clip-text text-transparent">'26</span>
+</h1>
+
+<!-- Subtitle Description -->
+<p class="mt-4 sm:mt-6 max-w-2xl text-xs sm:text-base text-slate-300 font-normal leading-relaxed text-center px-4 drop-shadow">
+        24-Hour National Innovation Hackathon hosted by 
+        <span class="text-white font-semibold">IEDC Bootcamp CEC</span>. Pushing technical boundaries in AI, deep-tech systems, and high-impact venture creation.
+</p>
+
+<!-- Dual Call to Action Buttons directly overlaying the hero background -->
+<div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
+<a class="w-full sm:w-auto text-center px-7 sm:px-9 py-3.5 rounded-full text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-neon-cyan transition-all duration-300 shadow-lg hover:shadow-glow-cyan transform hover:-translate-y-0.5" href="#apply">
+          CLAIM YOUR PASS
+</a>
+<a class="w-full sm:w-auto text-center px-7 sm:px-9 py-3.5 rounded-full text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-slate-200 bg-cosmic-800/80 border border-white/20 hover:border-neon-cyan/60 hover:text-white hover:bg-cosmic-700 transition-all duration-300 backdrop-blur-md" href="#highlights">
+          EXPLORE TRACKS
+</a>
+</div>
+
+<!-- Live Countdown Bar overlaying the hero background -->
+<div class="mt-8 sm:mt-12 w-full max-w-xl grid grid-cols-4 gap-2 sm:gap-4 font-mono px-1 sm:px-0" data-purpose="countdown-clock">
+<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
+<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-days">18</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">DAYS</span>
+</div>
+<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
+<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-hours">13</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">HOURS</span>
+</div>
+<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
+<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-mins">59</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">MINUTES</span>
+</div>
+<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
+<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-neon-cyan tracking-tight transition-all" id="cd-secs">57</span>
+<span class="text-[8px] sm:text-xs tracking-widest text-slate-400 uppercase mt-1">SECONDS</span>
+</div>
+</div>
+
+</div>
+
+<!-- Seamless Hero-to-Highlights Gradient Bridge -->
+<div class="hero-bottom-blend pointer-events-none" aria-hidden="true"></div>
+</section>
+<!-- END: HeroSection -->
+
+
+<!-- ============================================================
+     EVENT HIGHLIGHTS — Embedded directly inside section-bg.png
+     (Matches reference layout with cards sitting right on the circuit background)
+============================================================ -->
+<section class="circuit-section-bg py-14 sm:py-20 scroll-mt-20 relative" data-purpose="event-highlights" id="highlights">
+<div class="highlights-top-blend pointer-events-none" aria-hidden="true"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
+
+<!-- Section Header -->
+<div class="text-center space-y-2">
+<h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
+          EVENT HIGHLIGHTS
+</h2>
+<p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
+          Everything you need to know about the execution of Idea Sprint 2026
+</p>
+</div>
+
+<!-- 4-Card Desktop Grid — directly on top of the circuit background -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
+<!-- Highlight Card 1: 24 Hours -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-cyan/50 group">
+<div>
+<div class="w-11 h-11 rounded-xl bg-neon-cyan/10 border border-neon-cyan/30 flex items-center justify-center text-neon-cyan mb-5 group-hover:scale-110 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">SPRINT DURATION</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">24 Hours</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+              Non-stop building, rapid prototyping, and real-time mentor feedback.
+</p>
+</div>
+</div>
+
+<!-- Highlight Card 2: Expert Mentors -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/50 group">
+<div>
+<div class="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">MENTORS</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">Expert Mentors</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+              Top tier researchers, and technical alumni available in every session.
+</p>
+</div>
+</div>
+
+<!-- Highlight Card 3: Exciting Prizes -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-magenta/50 group">
+<div>
+<div class="w-11 h-11 rounded-xl bg-neon-magenta/10 border border-neon-magenta/30 flex items-center justify-center text-neon-magenta mb-5 group-hover:scale-110 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">REWARDS</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">Exciting Prizes</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+              Over $15,000+ across track cash pools, and fast-track incubator slots.
+</p>
+</div>
+</div>
+
+<!-- Highlight Card 4: Open Tracks -->
+<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 group">
+<div>
+<div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-5 group-hover:scale-110 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">DOMAINS</span>
+<h3 class="text-lg sm:text-xl font-display font-bold text-white mt-1 mb-2">Open Tracks</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+              Build across AI/Data, Clean Tech, Fintech, Web3, and autonomous systems.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- END: EventHighlights -->
+
+
+<!-- ============================================================
+     SPRINT TIMELINE — Embedded directly inside circuit background
+============================================================ -->
+<section class="circuit-section-bg-alt py-14 sm:py-20 scroll-mt-20" data-purpose="sprint-timeline" id="timeline">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+<!-- Section Header -->
+<div class="text-center space-y-2">
+<h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
+          SPRINT TIMELINE
+</h2>
+<p class="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto">
+          A relentless 24-hour sprint engineered to accelerate ideation, prototype validation, and product completion
+</p>
+</div>
+
+<!-- Two-Column Side-by-Side Widescreen Timeline -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+
+<!-- DAY 1 COLUMN -->
+<div class="cyber-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-neon-cyan/20 relative overflow-hidden shadow-2xl">
+<div class="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-glow-cyan animate-pulse"></span>
+<h3 class="text-base sm:text-lg font-display font-extrabold tracking-wider text-white">
+                DAY 1 • 15 JAN
+</h3>
+</div>
+<span class="px-3 py-1 rounded-full text-[9px] font-mono font-bold tracking-widest uppercase text-cyan-300 bg-cyan-950/80 border border-neon-cyan/40">
+              IN-PERSON CHECK-IN
+</span>
+</div>
+
+<!-- Day 1 Schedule List -->
+<div class="relative pl-5 space-y-6 border-l border-cyan-500/30">
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-cyan">09:00 AM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Check-in &amp; Hardware Setup</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Welcome kit, allocation of CEC Main Auditorium, network verification, and workstation configuration.
+</p>
+</div>
+
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-cyan">11:00 AM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Keynote &amp; Problem Statements Release</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Official kickoff by lead engineers, keynote address, and track matrix reveal.
+</p>
+</div>
+
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-cyan">01:00 PM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Hacking Commences &amp; Mentor Round 1</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Offline sprint kickoff. Product overview validation with industry mentors.
+</p>
+</div>
+
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-cyan">08:00 PM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Mid-Sprint Evaluation &amp; Midnight Fuel</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Progress verification checkpoint, tech problem triage, catering and DJ power set.
+</p>
+</div>
+</div>
+</div>
+
+<!-- DAY 2 COLUMN -->
+<div class="cyber-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-neon-magenta/20 relative overflow-hidden shadow-2xl">
+<div class="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-neon-magenta shadow-glow-magenta animate-pulse"></span>
+<h3 class="text-base sm:text-lg font-display font-extrabold tracking-wider text-white">
+                DAY 2 • 16 JAN
+</h3>
+</div>
+<span class="px-3 py-1 rounded-full text-[9px] font-mono font-bold tracking-widest uppercase text-pink-300 bg-pink-950/80 border border-neon-magenta/40">
+              SUBMISSION &amp; JUDGING
+</span>
+</div>
+
+<!-- Day 2 Schedule List -->
+<div class="relative pl-5 space-y-6 border-l border-pink-500/30">
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-magenta">04:00 AM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Debugging &amp; Final Roll Rush</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Technical assistance, CI/pipeline debugging checkpoint, smoke test runs on gates.
+</p>
+</div>
+
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-magenta">09:00 AM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Code Freeze &amp; Submission Deadline</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Git repositories committed, pitch decks submitted, live test demonstrations.
+</p>
+</div>
+
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-magenta">11:00 AM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Finalist Pitches to Investor Jury</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Top 12 teams pitch on the grand stage to five venture partners, Q&amp;A rounds with the panel.
+</p>
+</div>
+
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<span class="font-mono text-xs font-bold text-neon-magenta">03:00 PM</span>
+<h4 class="text-sm font-bold text-white mt-0.5">Award Ceremony &amp; Grand Reveal</h4>
+<p class="text-xs text-slate-400 mt-0.5 leading-relaxed">
+                Winner revelation, valedictory by IEDC CEC, cash prize transfers, partner representatives.
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- END: SprintTimeline -->
+
+
+<!-- ============================================================
+     IDEA GENERATOR — Embedded directly inside circuit background
+============================================================ -->
+<section class="circuit-section-bg py-14 sm:py-20 scroll-mt-20" data-purpose="idea-generator" id="generator">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+<!-- Section Header with Badge -->
+<div class="text-center space-y-3">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-[11px] font-mono font-semibold tracking-wider">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+          IDEA GENERATOR
+</div>
+<h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
+          STUCK ON AN IDEA?
+</h2>
+<p class="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto">
+          Sync binary problem spaces to formulate actionable problem statements, engineered for critical domains, and concurrent relevant contexts.
+</p>
+</div>
+
+<!-- Generator Card Container directly on circuit background -->
+<div class="cyber-card generator-container rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 shadow-2xl space-y-6">
+
+<!-- 3 Horizontal Matrix Categories -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Category 1: Domain -->
+<div class="card-matrix bg-cosmic-950/90 rounded-xl p-5 border border-white/10 hover:border-neon-blue/60 hover:shadow-[0_0_20px_rgba(0,85,255,0.35)] text-center flex flex-col items-center justify-center min-h-[120px] transition-all cursor-pointer focus:outline-none focus:border-neon-cyan" id="card-domain" role="button" tabindex="0" aria-label="Shuffle Domain category">
+<span class="text-[10px] font-mono tracking-widest text-slate-300 uppercase font-semibold">DOMAIN</span>
+<p class="text-sm sm:text-base font-display font-bold text-white mt-1.5 transition-all" id="gen-domain">Autonomous Mobility</p>
+<div class="w-8 h-0.5 bg-slate-700 mt-2.5 rounded-full transition-all" id="line-domain"></div>
+</div>
+
+<!-- Category 2: Core Technology -->
+<div class="card-matrix active-tech-glow bg-cosmic-900/90 rounded-xl p-5 border-2 border-neon-cyan text-center flex flex-col items-center justify-center min-h-[120px] relative overflow-hidden transition-all cursor-pointer focus:outline-none focus:ring-1 focus:ring-neon-cyan" id="card-tech" role="button" tabindex="0" aria-label="Shuffle Core Technology category">
+<span class="text-[10px] font-mono tracking-widest text-neon-cyan uppercase font-bold">CORE TECHNOLOGY</span>
+<p class="text-sm sm:text-base font-display font-bold text-white mt-1.5 transition-all" id="gen-tech">Computer Vision + LLMs</p>
+<div class="w-10 h-0.5 bg-neon-cyan mt-2.5 rounded-full transition-all" id="line-tech"></div>
+</div>
+
+<!-- Category 3: Context & Application -->
+<div class="card-matrix bg-cosmic-950/90 rounded-xl p-5 border border-white/10 hover:border-neon-magenta/60 hover:shadow-[0_0_20px_rgba(255,0,85,0.35)] text-center flex flex-col items-center justify-center min-h-[120px] transition-all cursor-pointer focus:outline-none focus:border-neon-magenta" id="card-context" role="button" tabindex="0" aria-label="Shuffle Context category">
+<span class="text-[10px] font-mono tracking-widest text-slate-300 uppercase font-semibold">CONTEXT &amp; APPLICATION</span>
+<p class="text-sm sm:text-base font-display font-bold text-white mt-1.5 transition-all" id="gen-context">Rural Clinics</p>
+<div class="w-8 h-0.5 bg-slate-700 mt-2.5 rounded-full transition-all" id="line-context"></div>
+</div>
+</div>
+
+<!-- Shuffle Action Trigger -->
+<div class="flex justify-center">
+<button class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-slate-950 font-mono text-xs font-extrabold uppercase tracking-wider hover:bg-neon-cyan hover:shadow-glow-cyan transition-all transform hover:scale-105 active:scale-95 shadow-md group" id="shuffle-trigger" type="button">
+<svg class="w-4 h-4 text-slate-900 transition-transform duration-500" id="shuffle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+            SHUFFLE
+</button>
+</div>
+
+<!-- Synthesized Problem Statement Box -->
+<div class="bg-cosmic-950/95 rounded-xl p-5 sm:p-6 border border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all" id="synthesized-box">
+<div class="space-y-1.5">
+<span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase font-semibold">SYNTHESIZED PROBLEM STATEMENT</span>
+<p class="text-sm sm:text-base font-medium text-white max-w-2xl leading-snug transition-all" id="synthesized-text">
+              Can we build <span class="text-neon-cyan font-semibold" id="st-domain">Autonomous Mobility</span> leveraging <span class="text-purple-300 font-semibold" id="st-tech">Computer Vision + LLMs</span> for <span class="text-pink-300 font-semibold" id="st-context">Rural Clinics</span>?
+</p>
+</div>
+<a class="inline-flex items-center justify-center shrink-0 gap-2 px-5 py-2.5 rounded-xl bg-neon-blue hover:bg-blue-600 text-white text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 border border-blue-400/40 hover:shadow-glow-cyan" href="#apply" id="lock-in-problem-btn">
+            Lock In Problem <span>→</span>
+</a>
+</div>
+
+</div>
+</div>
+</section>
+<!-- END: IdeaGeneratorSection -->
+
+
+<!-- ============================================================
+     REGISTRATION FORM — Embedded directly inside circuit background
+============================================================ -->
+<section class="circuit-section-bg-alt py-14 sm:py-20 scroll-mt-20" data-purpose="registration-form" id="apply">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
+
+<!-- Section Header -->
+<div class="text-center space-y-2">
+<h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
+          APPLY FOR SPRINT 2026
+</h2>
+<p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto">
+          Only 30 Team slots remain subject to screening by technical mentors. Decision released in 48 hours.
+</p>
+</div>
+
+<!-- Registration Form Container on top of circuit background -->
+<div class="cyber-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-10 border border-white/10 shadow-2xl">
+<form class="space-y-7" id="sprint-registration-form" onsubmit="handleFormSubmit(event)">
+
+<!-- 01 CANDIDATE CONTACT DETAILS -->
+<div class="space-y-4">
+<div class="flex items-center gap-2.5 pb-2.5 border-b border-dashed border-white/10">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-mono font-bold text-xs">01</span>
+<h3 class="text-xs sm:text-sm font-mono font-bold tracking-widest uppercase text-white">
+        CANDIDATE CONTACT DETAILS
+</h3>
+</div>
+
+<!-- Full Name (Team Lead) -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="lead-name">
+          Full Name <span class="text-amber-400">*</span>
+</label>
+<span class="text-xs font-mono text-slate-400">(Team Lead)</span>
+</div>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="lead-name" name="lead_name" autocomplete="name" placeholder="e.g. Ananya Nair" type="text" required>
+</div>
+
+<!-- Email Address & Mobile Number in 2 columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="college-email">
+          Email Address <span class="text-amber-400">*</span>
+</label>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="college-email" name="college_email" autocomplete="email" placeholder="name@college.edu" type="email" required>
+</div>
+
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="contact-phone">
+          Mobile Number <span class="text-amber-400">*</span>
+</label>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="contact-phone" name="contact_phone" autocomplete="tel" placeholder="e.g. 9876543210" type="tel" required>
+</div>
+</div>
+</div>
+
+<!-- 02 ACADEMIC BACKGROUND -->
+<div class="space-y-4 pt-2">
+<div class="flex items-center gap-2.5 pb-2.5 border-b border-dashed border-white/10">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-mono font-bold text-xs">02</span>
+<h3 class="text-xs sm:text-sm font-mono font-bold tracking-widest uppercase text-white">
+        ACADEMIC BACKGROUND
+</h3>
+</div>
+
+<!-- College / Institution Name -->
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="institution-name">
+        College / Institution Name <span class="text-amber-400">*</span>
+</label>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="institution-name" name="institution_name" autocomplete="organization" placeholder="e.g. College of Engineering Chengannur" type="text" required>
+</div>
+
+<!-- Academic Year & Department / Branch in 2 columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="lead-year">
+          Academic Year <span class="text-amber-400">*</span>
+</label>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="lead-year" name="lead_year" required>
+<option value="" disabled selected class="bg-cosmic-950 text-slate-500">Select Academic Year...</option>
+<option value="1st Year" class="bg-cosmic-950 text-white">1st Year (Freshman)</option>
+<option value="2nd Year" class="bg-cosmic-950 text-white">2nd Year (Sophomore)</option>
+<option value="3rd Year" class="bg-cosmic-950 text-white">3rd Year (Junior)</option>
+<option value="4th Year" class="bg-cosmic-950 text-white">4th Year (Senior)</option>
+<option value="Post Graduate" class="bg-cosmic-950 text-white">Post Graduate / M.Tech / MCA</option>
+</select>
+</div>
+
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="lead-dept">
+          Department / Branch <span class="text-amber-400">*</span>
+</label>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="lead-dept" name="lead_dept" required>
+<option value="" disabled selected class="bg-cosmic-950 text-slate-500">Select Department...</option>
+<option value="Computer Science & Engineering" class="bg-cosmic-950 text-white">Computer Science & Engineering (CSE)</option>
+<option value="Electronics & Communication" class="bg-cosmic-950 text-white">Electronics & Communication (ECE)</option>
+<option value="Electrical & Electronics" class="bg-cosmic-950 text-white">Electrical & Electronics (EEE)</option>
+<option value="Mechanical Engineering" class="bg-cosmic-950 text-white">Mechanical Engineering (ME)</option>
+<option value="AI & Data Science" class="bg-cosmic-950 text-white">Artificial Intelligence & Data Science (AI & DS)</option>
+<option value="Civil Engineering" class="bg-cosmic-950 text-white">Civil Engineering (CE)</option>
+<option value="Information Technology" class="bg-cosmic-950 text-white">Information Technology (IT)</option>
+<option value="Other Department" class="bg-cosmic-950 text-white">Other Specialization</option>
+</select>
+</div>
+</div>
+</div>
+
+<!-- 03 SQUAD & PROJECT TRACK -->
+<div class="space-y-4 pt-2">
+<div class="flex items-center gap-2.5 pb-2.5 border-b border-dashed border-white/10">
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-mono font-bold text-xs">03</span>
+<h3 class="text-xs sm:text-sm font-mono font-bold tracking-widest uppercase text-white">
+        SQUAD &amp; PROJECT TRACK
+</h3>
+</div>
+
+<!-- Team Size & Team Name (Optional) in 2 columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="team-size">
+          Team Size <span class="text-amber-400">*</span>
+</label>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="team-size" name="team_size" required>
+<option value="1 Candidate (Solo)" class="bg-cosmic-950 text-white">1 Candidate (Solo)</option>
+<option value="2 Candidates (Duo)" class="bg-cosmic-950 text-white">2 Candidates (Duo)</option>
+<option value="3 Candidates (Trio)" class="bg-cosmic-950 text-white">3 Candidates (Trio)</option>
+<option value="4 Candidates (Squad)" class="bg-cosmic-950 text-white" selected>4 Candidates (Squad)</option>
+</select>
+</div>
+
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="team-name">
+            Team Name
+</label>
+<span class="text-xs font-mono text-slate-400">(Optional)</span>
+</div>
+<input class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all min-h-[46px]" id="team-name" name="team_name" placeholder="e.g. ByteCraft Studio" type="text">
+</div>
+</div>
+
+<!-- Track Preference -->
+<div class="space-y-1.5">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="track-preference">
+        Track Preference <span class="text-amber-400">*</span>
+</label>
+<select class="w-full bg-cosmic-950 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all cursor-pointer min-h-[46px]" id="track-preference" name="track_preference" required>
+<option value="" disabled selected class="bg-cosmic-950 text-slate-500">Select a sprint track...</option>
+<option value="Artificial Intelligence & Autonomous Systems" class="bg-cosmic-950 text-white">Artificial Intelligence &amp; Autonomous Systems</option>
+<option value="Fintech & Decentralized Web3" class="bg-cosmic-950 text-white">Fintech &amp; Decentralized Web3</option>
+<option value="CleanTech & Sustainable Energy" class="bg-cosmic-950 text-white">CleanTech &amp; Sustainable Energy</option>
+<option value="HealthTech & Bio-Digital Systems" class="bg-cosmic-950 text-white">HealthTech &amp; Bio-Digital Systems</option>
+<option value="Open Innovation & Moonshots" class="bg-cosmic-950 text-white">Open Innovation &amp; Moonshots</option>
+</select>
+</div>
+
+<!-- Initial Idea / Concept (Optional) with character count -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-300" for="idea-brief">
+          Initial Idea / Concept <span class="text-slate-400 font-normal">(Optional)</span>
+</label>
+<span class="text-xs font-mono text-slate-400" id="idea-char-count">0 / 280</span>
+</div>
+<textarea class="w-full bg-cosmic-950/80 border border-white/15 rounded-xl px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan transition-all resize-none leading-relaxed" id="idea-brief" name="idea_brief" rows="3" maxlength="280" placeholder="Briefly describe your planned project or paste a prompt from the Idea Spinner above..."></textarea>
+</div>
+
+<!-- Code of Conduct Checkbox -->
+<div class="pt-2">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input type="checkbox" id="conduct-agree" name="conduct_agree" required class="mt-1 w-4 h-4 rounded border-white/20 bg-cosmic-950 text-neon-cyan focus:ring-neon-cyan focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer">
+<span class="text-xs text-slate-300 leading-relaxed group-hover:text-white transition-colors">
+          I agree to the <span class="text-white font-semibold">IEDC Code of Conduct</span>, confirm that all submissions will be created during the 24-hour sprint, and acknowledge adherence to campus guidelines. <span class="text-amber-400">*</span>
+</span>
+</label>
+</div>
+</div>
+
+<!-- Submit Button (Electric Cyan & Cobalt Blue theme) -->
+<div class="pt-2">
+<button class="w-full py-4 px-6 rounded-xl sm:rounded-2xl bg-gradient-to-r from-neon-cyan via-cyan-400 to-neon-blue text-slate-950 font-mono text-xs sm:text-sm font-black uppercase tracking-widest shadow-glow-cyan hover:shadow-[0_0_35px_rgba(0,240,255,0.7)] hover:opacity-95 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 group" type="submit">
+<svg class="w-4 h-4 text-slate-950 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+        SUBMIT TEAM ENTRY
+</button>
+</div>
+</form>
+
+<!-- Success state -->
+<div id="form-success" class="hidden text-center py-8 space-y-4">
+  <div class="w-16 h-16 rounded-full bg-neon-cyan/10 border-2 border-neon-cyan flex items-center justify-center text-3xl mx-auto shadow-glow-cyan">
+    🚀
+  </div>
+  <div class="space-y-1">
+    <span class="text-[10px] font-mono tracking-widest text-emerald-400 uppercase font-bold flex items-center justify-center gap-1.5">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] animate-pulse"></span>
+      TICKET CONFIRMED &amp; REGISTERED
+    </span>
+    <h3 class="text-xl sm:text-2xl font-display font-black text-white tracking-wider" id="success-team-name">TEAM APPLICATION RECEIVED</h3>
+  </div>
+  <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed" id="success-message">
+    Your team application has been logged into the screening matrix. Our technical mentors will review and confirm your slot within 48 hours.
+  </p>
+  <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-cosmic-950 border border-white/15 text-xs font-mono text-slate-400">
+      STATUS: <span class="text-emerald-400 font-bold">CONFIRMED (TICKET ACTIVE)</span>
+    </div>
+    <button type="button" id="reopen-ticket-btn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-neon-blue to-neon-cyan text-slate-950 font-mono text-xs font-extrabold uppercase tracking-wider hover:opacity-95 shadow-glow-cyan transition-all transform hover:-translate-y-0.5">
+      <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"></path></svg>
+      VIEW CONFIRMED TICKET
+    </button>
+  </div>
+</div>
+</div>
+
+</div>
+</section>
+<!-- END: RegistrationFormSection -->
+
+
+<!-- ============================================================
+     FAQ SECTION — Embedded directly inside circuit background
+============================================================ -->
+<section class="circuit-section-bg py-14 sm:py-20 scroll-mt-20" data-purpose="faq-section" id="faq">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
+    <div class="text-center space-y-2">
+      <h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
+        FREQUENTLY ASKED QUESTIONS
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+        Everything you need to know about Idea Sprint 2026, team composition, guidelines, and bounties.
+      </p>
+    </div>
+    <div class="space-y-3 pt-2">
+      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+        <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">What is the team size requirement?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Teams can consist of 1 to 4 members. You can participate solo or form a full squad across different engineering branches.</p>
+      </div>
+      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+        <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">Is there any registration fee?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">No! Idea Sprint 2026 is completely free for all selected student innovators, including meals, workstation power, and hardware support during the 24 hours.</p>
+      </div>
+      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+        <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">What should we bring to the venue?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Bring your laptops, chargers, hardware kits (if building IoT/Robotics), student IDs, and lots of enthusiasm. Sleeping gear and high-speed Wi-Fi will be available on-site.</p>
+      </div>
+      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+        <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">How do the judging and bounties work?</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Projects are evaluated on originality, technical complexity, utility, and live demo quality by a distinguished jury of founders, venture capitalists, and senior engineers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: FAQ -->
+
+</main>
+
+<!-- ============================================================
+     SITE FOOTER — Integrated with circuit styling and IEDC Logo
+============================================================ -->
+<footer class="circuit-section-bg-alt pt-12 pb-8 relative z-10" data-purpose="site-footer" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-white/10">
+      <!-- Left Column: IEDC Info with logo image -->
+      <div class="lg:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <picture>
+            <source srcset="iedc-logo.webp" type="image/webp">
+            <img
+              src="iedc-logo.png"
+              alt="IEDC Bootcamp CEC Logo"
+              width="65"
+              height="36"
+              loading="lazy"
+              decoding="async"
+              class="footer-logo-img"
+            />
+          </picture>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+          Innovation and Entrepreneurship Development Centre at College of Engineering Chengannur. Fostering bold technological venture creation, transformative deep-tech research, and high-impact hackathons.
+        </p>
+        <div class="inline-flex items-center gap-2 text-[10px] font-mono text-slate-400 pt-1">
+          <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>9.3174° N, 76.6171° E • CHENGANNUR, KERALA</span>
+        </div>
+      </div>
+      <!-- Middle Column: Microsite Tracks -->
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="text-[11px] font-mono font-bold tracking-widest uppercase text-white">MICROSITE TRACKS</h4>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li><a href="#highlights" class="hover:text-neon-cyan transition-colors">Event Architecture</a></li>
+          <li><a href="#highlights" class="hover:text-neon-cyan transition-colors">Prize Bounty Pool</a></li>
+          <li><a href="#timeline" class="hover:text-neon-cyan transition-colors">24-Hour Sprint Timeline</a></li>
+          <li><a href="#generator" class="hover:text-neon-cyan transition-colors">AI Problem Generator</a></li>
+          <li><a href="#apply" class="hover:text-neon-cyan transition-colors">Team Registration</a></li>
+        </ul>
+      </div>
+      <!-- Right Column: Terminal Nexus -->
+      <div class="lg:col-span-4 space-y-3">
+        <h4 class="text-[11px] font-mono font-bold tracking-widest uppercase text-white">TERMINAL NEXUS</h4>
+        <div class="space-y-2 text-xs text-slate-300">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <a href="mailto:iedc@ceconline.edu" class="hover:text-neon-cyan transition-colors">iedc@ceconline.edu</a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 0-3.06 1.53 1.53 0 0 0 0 3.06m1.4 9.74v-8.37H5.06v8.37z"></path>
+            </svg>
+            <a href="https://www.linkedin.com/company/iedcbootcampcec" target="_blank" rel="noopener noreferrer" class="hover:text-neon-cyan transition-colors">linkedin.com/company/iedcbootcampcec</a>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <svg class="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+            <span>College of Engineering Chengannur, Kerala - 689121</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <!-- LinkedIn Official Link -->
+          <a href="https://www.linkedin.com/company/iedcbootcampcec" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="LinkedIn - IEDC Bootcamp CEC">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 0 0 0-3.06 1.53 1.53 0 0 0 0 3.06m1.4 9.74v-8.37H5.06v8.37z"></path>
+            </svg>
+          </a>
+          <a href="https://www.iedcbootcampcec.org/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="Official Website">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="YouTube">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="Community Chat">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full bg-cosmic-900 border border-white/10 flex items-center justify-center text-slate-300 hover:text-neon-cyan hover:border-neon-cyan/40 transition-all" aria-label="Source Code">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] font-mono text-slate-400">
+      <div>© 2026 IEDC BOOTCAMP CEC. ENGINEERED FOR IDEA SPRINT 2026. ALL RIGHTS RESERVED.</div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-neon-cyan transition-colors uppercase">TERMS</a>
+        <a href="#" class="hover:text-neon-cyan transition-colors uppercase">CODE OF CONDUCT</a>
+        <a href="#" class="hover:text-neon-cyan transition-colors uppercase">SECURITY</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: SiteFooter -->
+
+
+<!-- ============================================================
+     TICKET CONFIRMATION WINDOW / MODAL POPUP
+============================================================ -->
+<div id="ticket-modal" class="hidden fixed inset-0 z-[100] overflow-y-auto bg-cosmic-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title">
+
+  <!-- Modal Dialog Window Container -->
+  <div class="relative w-full max-w-lg cyber-card rounded-2xl sm:rounded-3xl border border-neon-cyan/40 bg-cosmic-900/95 shadow-[0_0_60px_rgba(0,240,255,0.3)] p-5 sm:p-7 space-y-5 ticket-modal-animate" id="ticket-modal-card">
+
+    <!-- Top Glow Ribbon / Close Button -->
+    <div class="flex items-center justify-between pb-3 border-b border-white/10">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_#34d399] animate-pulse"></span>
+        <span class="text-[11px] font-mono font-bold tracking-widest text-emerald-400 uppercase" id="ticket-modal-title">
+          TICKET CONFIRMED • PASS ACTIVE
+        </span>
+      </div>
+      <button type="button" id="close-ticket-btn" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 border border-white/15 flex items-center justify-center text-slate-300 hover:text-white transition-all" aria-label="Close ticket">
+        ✕
+      </button>
+    </div>
+
+    <!-- The Ticket Badge -->
+    <div class="ticket-badge-card relative rounded-2xl bg-gradient-to-b from-cosmic-950 via-cosmic-900 to-cosmic-950 border border-neon-cyan/35 p-5 sm:p-6 overflow-hidden shadow-2xl">
+      <!-- Ambient corner cyber gradients -->
+      <div class="absolute -top-12 -right-12 w-36 h-36 rounded-full bg-neon-cyan/15 blur-2xl pointer-events-none"></div>
+      <div class="absolute -bottom-12 -left-12 w-36 h-36 rounded-full bg-neon-magenta/15 blur-2xl pointer-events-none"></div>
+
+      <!-- Ticket Header Info -->
+      <div class="flex items-start justify-between gap-3 border-b border-white/10 pb-4 relative z-10">
+        <div>
+          <span class="text-[9px] font-mono tracking-widest uppercase text-neon-cyan font-bold">IEDC BOOTCAMP CEC</span>
+          <h4 class="text-xl sm:text-2xl font-display font-black text-white tracking-wide mt-0.5">
+            IDEA SPRINT <span class="text-neon-cyan">'26</span>
+          </h4>
+          <p class="text-[10px] text-slate-400 font-mono tracking-wider">NATIONAL UNIVERSITY INNOVATION SPRINT</p>
+        </div>
+        <div class="text-right">
+          <span class="px-2.5 py-1 rounded-full text-[9px] font-mono font-bold text-white bg-gradient-to-r from-neon-blue to-neon-cyan shadow-glow-cyan uppercase">
+            CANDIDATE PASS
+          </span>
+          <p class="text-[10px] font-mono text-neon-cyan mt-1.5 font-bold tracking-wider" id="ticket-pass-id">#IS26-CONF-4821</p>
+        </div>
+      </div>
+
+      <!-- Perforated Cutouts on Left and Right (Classic Ticket Aesthetic) -->
+      <div class="relative py-3.5 my-1 border-b border-dashed border-white/20 flex items-center justify-between text-xs font-mono">
+        <div class="absolute -left-7 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cosmic-900 border-r border-neon-cyan/40"></div>
+        <div class="absolute -right-7 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-cosmic-900 border-l border-neon-cyan/40"></div>
+        <span class="text-slate-400 text-[10px] uppercase tracking-wider">OFFICIAL ADMISSION TICKET</span>
+        <span class="text-emerald-400 font-bold text-[10px] flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+          VERIFIED ENTRY
+        </span>
+      </div>
+
+      <!-- Ticket Details Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 pt-2 relative z-10 text-xs">
+        <div>
+          <span class="block text-[9px] font-mono tracking-widest uppercase text-slate-400">TEAM NAME</span>
+          <p class="font-display font-bold text-white text-sm sm:text-base mt-0.5 truncate" id="ticket-team-name">APEX SYNAPSE</p>
+        </div>
+        <div>
+          <span class="block text-[9px] font-mono tracking-widest uppercase text-slate-400">TEAM LEAD</span>
+          <p class="font-display font-bold text-neon-cyan text-sm sm:text-base mt-0.5 truncate" id="ticket-lead-name">Rohith Varma</p>
+        </div>
+        <div>
+          <span class="block text-[9px] font-mono tracking-widest uppercase text-slate-400">DEPARTMENT &amp; YEAR</span>
+          <p class="font-mono text-slate-200 text-xs mt-0.5 truncate" id="ticket-dept-year">CSE • 3rd Year</p>
+        </div>
+        <div>
+          <span class="block text-[9px] font-mono tracking-widest uppercase text-slate-400">SQUAD SIZE</span>
+          <p class="font-mono text-slate-200 text-xs mt-0.5" id="ticket-squad-size">4 Candidates (Squad)</p>
+        </div>
+        <div class="col-span-1 sm:col-span-2 pt-2 border-t border-white/5">
+          <span class="block text-[9px] font-mono tracking-widest uppercase text-slate-400">REGISTERED IDEA TRACK</span>
+          <p class="font-mono text-slate-300 text-xs mt-0.5 line-clamp-2 leading-relaxed" id="ticket-idea-text">
+            Build Autonomous Mobility leveraging Computer Vision + LLMs for Rural Clinics
+          </p>
+        </div>
+        <div class="col-span-1 sm:col-span-2 pt-1 border-t border-white/5">
+          <span class="block text-[9px] font-mono tracking-widest uppercase text-slate-400">EVENT VENUE &amp; SCHEDULE</span>
+          <p class="font-mono text-slate-300 text-xs mt-0.5">
+            15 - 16 JAN 2026 • College of Engineering Chengannur (CEC Auditorium)
+          </p>
+        </div>
+      </div>
+
+      <!-- Barcode Visual Footer -->
+      <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between gap-3 relative z-10">
+        <!-- SVG Cyber Barcode -->
+        <div class="flex items-center gap-[2px] h-9 opacity-90">
+          <div class="w-1 h-full bg-white"></div>
+          <div class="w-0.5 h-full bg-transparent"></div>
+          <div class="w-1.5 h-full bg-neon-cyan"></div>
+          <div class="w-0.5 h-full bg-transparent"></div>
+          <div class="w-0.5 h-full bg-white"></div>
+          <div class="w-1 h-full bg-white"></div>
+          <div class="w-2 h-full bg-neon-cyan"></div>
+          <div class="w-1 h-full bg-transparent"></div>
+          <div class="w-0.5 h-full bg-white"></div>
+          <div class="w-1.5 h-full bg-white"></div>
+          <div class="w-0.5 h-full bg-neon-cyan"></div>
+          <div class="w-1 h-full bg-transparent"></div>
+          <div class="w-2 h-full bg-white"></div>
+          <div class="w-0.5 h-full bg-white"></div>
+          <div class="w-1 h-full bg-neon-cyan"></div>
+          <div class="w-1.5 h-full bg-white"></div>
+          <div class="w-0.5 h-full bg-transparent"></div>
+          <div class="w-2 h-full bg-white"></div>
+          <div class="w-1 h-full bg-neon-cyan"></div>
+        </div>
+        <div class="text-right">
+          <span class="text-[9px] font-mono tracking-wider text-slate-400 block uppercase">GATE SECURITY MATRIX</span>
+          <span class="text-[10px] font-mono text-neon-cyan font-bold uppercase tracking-widest">SCAN AT CHECK-IN</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-1">
+      <button type="button" id="print-ticket-btn" class="w-full sm:flex-1 py-3 px-4 rounded-xl bg-neon-blue hover:bg-blue-600 text-white font-mono text-xs font-bold uppercase tracking-wider transition-all duration-200 border border-blue-400/40 hover:shadow-glow-cyan flex items-center justify-center gap-2 min-h-[44px]">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        PRINT / SAVE PASS
+      </button>
+      <button type="button" id="dismiss-ticket-btn" class="w-full sm:w-auto py-3 px-5 rounded-xl bg-cosmic-950 border border-white/20 hover:border-slate-400 text-slate-300 hover:text-white font-mono text-xs font-bold uppercase tracking-wider transition-all min-h-[44px]">
+        CLOSE
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- BEGIN: ClientScripts -->
+<script data-purpose="idea-generator-shuffle">
+  const domains = [
+    "Autonomous Mobility",
+    "Decentralized Energy",
+    "Synthetic Biology",
+    "Zero-Knowledge Finance",
+    "Cognitive Logistics",
+    "Neural Interfaces",
+    "Smart Agriculture",
+    "Quantum Cryptography"
+  ];
+  const tech = [
+    "Computer Vision + LLMs",
+    "Edge Micro-Models",
+    "Neuromorphic Sensors",
+    "zk-SNARKs & Smart Contracts",
+    "Multi-Agent RL",
+    "Federated Learning",
+    "Bio-Digital Sensors",
+    "Photonic Edge Chips"
+  ];
+  const contexts = [
+    "Rural Clinics",
+    "Disaster Evacuation",
+    "Urban Micro-Grids",
+    "Border Healthcare",
+    "Underbanked MSMEs",
+    "Ocean Micro-Plastics",
+    "Deep-Mine Safety",
+    "High-Density Transit"
+  ];
+
+  const shuffleBtn    = document.getElementById('shuffle-trigger');
+  const shuffleIcon   = document.getElementById('shuffle-icon');
+  const briefInput    = document.getElementById('idea-brief');
+  const genDomain     = document.getElementById('gen-domain');
+  const genTech       = document.getElementById('gen-tech');
+  const genContext    = document.getElementById('gen-context');
+  const cardDomain    = document.getElementById('card-domain');
+  const cardTech      = document.getElementById('card-tech');
+  const cardContext   = document.getElementById('card-context');
+  const lineDomain    = document.getElementById('line-domain');
+  const lineTech      = document.getElementById('line-tech');
+  const lineContext   = document.getElementById('line-context');
+  const synthBox      = document.getElementById('synthesized-box');
+  const stDomain      = document.getElementById('st-domain');
+  const stTech        = document.getElementById('st-tech');
+  const stContext     = document.getElementById('st-context');
+
+  let isShuffling = false;
+
+  function runIdeaShuffle() {
+    if (isShuffling) return;
+    isShuffling = true;
+
+    // 1. Spin the shuffle button icon
+    if (shuffleIcon) {
+      shuffleIcon.classList.remove('shuffle-spinning');
+      void shuffleIcon.offsetWidth; // force reflow
+      shuffleIcon.classList.add('shuffle-spinning');
+    }
+
+    // 2. Select final target values (different from current)
+    const pickNew = (arr, current) => {
+      const filtered = arr.filter(item => item !== current);
+      return filtered[Math.floor(Math.random() * filtered.length)];
+    };
+
+    const targetD = pickNew(domains, genDomain.textContent);
+    const targetT = pickNew(tech, genTech.textContent);
+    const targetC = pickNew(contexts, genContext.textContent);
+
+    // 3. Enter rapid rolling state on text
+    [genDomain, genTech, genContext].forEach(el => {
+      el.classList.add('slot-rolling');
+    });
+
+    // Animate lines to active cyan/magenta
+    if (lineDomain) lineDomain.className = "w-12 h-0.5 bg-neon-blue mt-2.5 rounded-full transition-all";
+    if (lineTech) lineTech.className = "w-14 h-0.5 bg-neon-cyan mt-2.5 rounded-full transition-all shadow-glow-cyan";
+    if (lineContext) lineContext.className = "w-12 h-0.5 bg-neon-magenta mt-2.5 rounded-full transition-all";
+
+    // Rapid decoder text flashing interval
+    const cycleInterval = setInterval(() => {
+      genDomain.textContent  = domains[Math.floor(Math.random() * domains.length)];
+      genTech.textContent    = tech[Math.floor(Math.random() * tech.length)];
+      genContext.textContent = contexts[Math.floor(Math.random() * contexts.length)];
+    }, 50);
+
+    // 4. Staggered Lock-In sequence:
+
+    // Lock-in 1: Domain (~280ms)
+    setTimeout(() => {
+      genDomain.classList.remove('slot-rolling');
+      genDomain.textContent = targetD;
+      if (cardDomain) {
+        cardDomain.classList.remove('card-lock-impact');
+        void cardDomain.offsetWidth;
+        cardDomain.classList.add('card-lock-impact');
+      }
+      if (lineDomain) lineDomain.className = "w-8 h-0.5 bg-neon-blue mt-2.5 rounded-full transition-all";
+    }, 280);
+
+    // Lock-in 2: Core Technology (~440ms)
+    setTimeout(() => {
+      genTech.classList.remove('slot-rolling');
+      genTech.textContent = targetT;
+      if (cardTech) {
+        cardTech.classList.remove('card-lock-impact');
+        void cardTech.offsetWidth;
+        cardTech.classList.add('card-lock-impact');
+      }
+      if (lineTech) lineTech.className = "w-10 h-0.5 bg-neon-cyan mt-2.5 rounded-full transition-all";
+    }, 440);
+
+    // Lock-in 3: Context & Application (~600ms)
+    setTimeout(() => {
+      clearInterval(cycleInterval);
+      genContext.classList.remove('slot-rolling');
+      genContext.textContent = targetC;
+      if (cardContext) {
+        cardContext.classList.remove('card-lock-impact');
+        void cardContext.offsetWidth;
+        cardContext.classList.add('card-lock-impact');
+      }
+      if (lineContext) lineContext.className = "w-8 h-0.5 bg-slate-700 mt-2.5 rounded-full transition-all";
+
+      // Update synthesized statement with glowing sweep
+      if (stDomain) stDomain.textContent   = targetD;
+      if (stTech) stTech.textContent     = targetT;
+      if (stContext) stContext.textContent  = targetC;
+      if (briefInput) {
+        briefInput.value = `Build ${targetD} leveraging ${targetT} for ${targetC}`;
+        const charCount = document.getElementById('idea-char-count');
+        if (charCount) charCount.textContent = `${briefInput.value.length} / 280`;
+      }
+
+      if (synthBox) {
+        synthBox.classList.remove('synth-glow-pulse');
+        void synthBox.offsetWidth;
+        synthBox.classList.add('synth-glow-pulse');
+      }
+
+      isShuffling = false;
+    }, 600);
+  }
+
+  // Shuffle button click
+  if (shuffleBtn) {
+    shuffleBtn.addEventListener('click', runIdeaShuffle);
+  }
+
+  // Also make cards clickable & keyboard-accessible for instant shuffle animation!
+  [cardDomain, cardTech, cardContext].forEach(card => {
+    if (card) {
+      card.addEventListener('click', runIdeaShuffle);
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          runIdeaShuffle();
+        }
+      });
+    }
+  });
+
+  // Lock In Problem button click
+  const lockInBtn = document.getElementById('lock-in-problem-btn');
+  if (lockInBtn && briefInput) {
+    lockInBtn.addEventListener('click', () => {
+      const curDomain = genDomain ? genDomain.textContent : 'Autonomous Mobility';
+      const curTech   = genTech ? genTech.textContent : 'Computer Vision + LLMs';
+      const curCtx    = genContext ? genContext.textContent : 'Rural Clinics';
+      briefInput.value = `Build ${curDomain} leveraging ${curTech} for ${curCtx}`;
+      const charCount = document.getElementById('idea-char-count');
+      if (charCount) charCount.textContent = `${briefInput.value.length} / 280`;
+    });
+  }
+</script>
+
+<script data-purpose="countdown-clock">
+  // Persistent Target Date: 18 days, 13 hours, 59 mins from initialization (matching the design)
+  let targetTime = localStorage.getItem('iedc_sprint26_target');
+  if (!targetTime || new Date(targetTime).getTime() <= Date.now()) {
+    const t = new Date();
+    t.setDate(t.getDate() + 18);
+    t.setHours(t.getHours() + 13);
+    t.setMinutes(t.getMinutes() + 59);
+    t.setSeconds(t.getSeconds() + 57);
+    targetTime = t.toISOString();
+    localStorage.setItem('iedc_sprint26_target', targetTime);
+  }
+  const eventTarget = new Date(targetTime);
+
+  const elDays  = document.getElementById('cd-days');
+  const elHours = document.getElementById('cd-hours');
+  const elMins  = document.getElementById('cd-mins');
+  const elSecs  = document.getElementById('cd-secs');
+
+  function updateClock() {
+    const now  = new Date();
+    const diff = Math.max(0, eventTarget - now);
+
+    const pad = n => String(Math.floor(n)).padStart(2, '0');
+    const d = pad(diff / (1000 * 60 * 60 * 24));
+    const h = pad((diff / (1000 * 60 * 60)) % 24);
+    const m = pad((diff / (1000 * 60)) % 60);
+    const s = pad((diff / 1000) % 60);
+
+    if (elDays)  elDays.textContent  = d;
+    if (elHours) elHours.textContent = h;
+    if (elMins)  elMins.textContent  = m;
+    if (elSecs) {
+      elSecs.textContent = s;
+      elSecs.style.textShadow = '0 0 16px rgba(0, 240, 255, 0.9)';
+      setTimeout(() => {
+        elSecs.style.textShadow = '0 0 8px rgba(0, 240, 255, 0.5)';
+      }, 300);
+    }
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+<script data-purpose="form-helpers">
+  const ideaBriefArea = document.getElementById('idea-brief');
+  const ideaCharDisplay = document.getElementById('idea-char-count');
+
+  if (ideaBriefArea && ideaCharDisplay) {
+    ideaBriefArea.addEventListener('input', () => {
+      ideaCharDisplay.textContent = `${ideaBriefArea.value.length} / 280`;
+    });
+  }
+</script>
+
+<script data-purpose="form-submit">
+  const ticketModal   = document.getElementById('ticket-modal');
+  const ticketModalCard = document.getElementById('ticket-modal-card');
+  const closeTicketBtn = document.getElementById('close-ticket-btn');
+  const dismissTicketBtn = document.getElementById('dismiss-ticket-btn');
+  const reopenTicketBtn = document.getElementById('reopen-ticket-btn');
+  const printTicketBtn = document.getElementById('print-ticket-btn');
+
+  function openTicketModal() {
+    if (!ticketModal) return;
+    ticketModal.classList.remove('hidden');
+    ticketModal.classList.add('flex');
+    document.body.classList.add('overflow-hidden');
+  }
+
+  function closeTicketModal() {
+    if (!ticketModal) return;
+    ticketModal.classList.add('hidden');
+    ticketModal.classList.remove('flex');
+    document.body.classList.remove('overflow-hidden');
+  }
+
+  // Dismiss listeners
+  if (closeTicketBtn) closeTicketBtn.addEventListener('click', closeTicketModal);
+  if (dismissTicketBtn) dismissTicketBtn.addEventListener('click', closeTicketModal);
+  if (reopenTicketBtn) reopenTicketBtn.addEventListener('click', openTicketModal);
+
+  // Close on backdrop click
+  if (ticketModal) {
+    ticketModal.addEventListener('click', e => {
+      if (e.target === ticketModal) {
+        closeTicketModal();
+      }
+    });
+  }
+
+  // Close on Escape key
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && ticketModal && !ticketModal.classList.contains('hidden')) {
+      closeTicketModal();
+    }
+  });
+
+  // Print pass
+  if (printTicketBtn) {
+    printTicketBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('sprint-registration-form');
+    const success = document.getElementById('form-success');
+    const teamNameInput = document.getElementById('team-name');
+    const leadNameInput = document.getElementById('lead-name');
+    const leadEmailInput = document.getElementById('college-email');
+    const instNameInput = document.getElementById('institution-name');
+    const leadYearSelect = document.getElementById('lead-year');
+    const leadDeptSelect = document.getElementById('lead-dept');
+    const teamSizeSelect = document.getElementById('team-size');
+    const trackPrefSelect = document.getElementById('track-preference');
+    const ideaBriefInput = document.getElementById('idea-brief');
+    const titleEl = document.getElementById('success-team-name');
+    const msgEl = document.getElementById('success-message');
+
+    const leadName = (leadNameInput && leadNameInput.value.trim()) || 'Lead Candidate';
+    const teamName = (teamNameInput && teamNameInput.value.trim()) || `${leadName}'s Squad`;
+    const leadEmail = (leadEmailInput && leadEmailInput.value.trim()) || '';
+    const leadYear = (leadYearSelect && leadYearSelect.value) || '3rd Year';
+    const leadDept = (leadDeptSelect && leadDeptSelect.value) || 'Computer Science & Engineering';
+    const teamSize = (teamSizeSelect && teamSizeSelect.value) || '4 Candidates (Squad)';
+    const trackPreference = (trackPrefSelect && trackPrefSelect.value) || 'Artificial Intelligence & Autonomous Systems';
+    const ideaText = (ideaBriefInput && ideaBriefInput.value.trim()) || '';
+
+    // Populate Page Success Box
+    if (titleEl) {
+      titleEl.textContent = `${teamName.toUpperCase()} REGISTERED`;
+    }
+    if (msgEl) {
+      msgEl.innerHTML = `Great work, <span class="text-white font-semibold">${leadName}</span>! Your official entry pass has been generated. Confirmation and mentor screening updates will be dispatched to <span class="text-neon-cyan font-mono">${leadEmail}</span> within 48 hours.`;
+    }
+
+    // Populate Ticket Confirmation Window
+    const elTktTeam  = document.getElementById('ticket-team-name');
+    const elTktLead  = document.getElementById('ticket-lead-name');
+    const elTktDept  = document.getElementById('ticket-dept-year');
+    const elTktSquad = document.getElementById('ticket-squad-size');
+    const elTktIdea  = document.getElementById('ticket-idea-text');
+    const elTktPass  = document.getElementById('ticket-pass-id');
+
+    if (elTktTeam)  elTktTeam.textContent  = teamName.toUpperCase();
+    if (elTktLead)  elTktLead.textContent  = leadName;
+    if (elTktDept)  elTktDept.textContent  = `${leadDept} • ${leadYear}`;
+    if (elTktSquad) elTktSquad.textContent = teamSize;
+    if (elTktIdea)  elTktIdea.textContent  = ideaText ? `${trackPreference} — ${ideaText}` : trackPreference;
+    if (elTktPass) {
+      const hexRand = Math.random().toString(36).substring(2, 6).toUpperCase();
+      elTktPass.textContent = `#IS26-${hexRand}-CEC`;
+    }
+
+    // Transition form to success in page
+    if (form) form.classList.add('hidden');
+    if (success) {
+      success.classList.remove('hidden');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Open Confirmed Ticket Window Popup!
+    openTicketModal();
+  }
+</script>
+<script data-purpose="responsive-navigation-and-scroll">
+  const mainHeader   = document.getElementById('main-header');
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu   = document.getElementById('mobile-nav-menu');
+  const bar1         = document.getElementById('hamburger-bar-1');
+  const bar2         = document.getElementById('hamburger-bar-2');
+  const bar3         = document.getElementById('hamburger-bar-3');
+
+  // Sticky header background on scroll
+  if (mainHeader) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        mainHeader.classList.add('bg-cosmic-950/85', 'backdrop-blur-md', 'border-b', 'border-white/10');
+        mainHeader.classList.remove('bg-transparent');
+      } else {
+        mainHeader.classList.remove('bg-cosmic-950/85', 'backdrop-blur-md', 'border-b', 'border-white/10');
+        mainHeader.classList.add('bg-transparent');
+      }
+    }, { passive: true });
+  }
+
+  // Mobile menu open / close toggle
+  function toggleMobileMenu(forceClose = false) {
+    if (!mobileMenu || !mobileToggle) return;
+    const isCurrentlyOpen = !mobileMenu.classList.contains('hidden');
+    const shouldOpen = forceClose ? false : !isCurrentlyOpen;
+
+    if (shouldOpen) {
+      mobileMenu.classList.remove('hidden');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      if (bar1) bar1.classList.add('rotate-45', 'translate-y-2');
+      if (bar2) bar2.classList.add('opacity-0');
+      if (bar3) bar3.classList.add('-rotate-45', '-translate-y-2');
+    } else {
+      mobileMenu.classList.add('hidden');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      if (bar1) bar1.classList.remove('rotate-45', 'translate-y-2');
+      if (bar2) bar2.classList.remove('opacity-0');
+      if (bar3) bar3.classList.remove('-rotate-45', '-translate-y-2');
+    }
+  }
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', e => {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+
+  // Close mobile drawer when any link inside is tapped
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMobileMenu(true);
+    });
+  });
+
+  // Close when clicking outside of drawer
+  window.addEventListener('click', e => {
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        toggleMobileMenu(true);
+      }
+    }
+  });
+
+  // Close on Escape key
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      toggleMobileMenu(true);
+    }
+  });
+</script>
+<!-- END: ClientScripts -->
+
+</body></html>
