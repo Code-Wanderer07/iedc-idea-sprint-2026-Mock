@@ -385,6 +385,62 @@
       animation: ticketModalPop 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
+    /* ── MOBILE-OPTIMIZED HARDWARE-ACCELERATED SCROLL REVEALS ── */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-reveal.is-revealed {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    /* Sequential Timeline Step Progress on Mobile Scroll */
+    .scroll-step {
+      opacity: 0.28;
+      transform: translate3d(0, 16px, 0);
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-step.step-active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    .step-node {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, box-shadow 0.35s ease;
+      will-change: transform, box-shadow;
+    }
+    .scroll-step.step-active .step-node {
+      transform: scale(1.35);
+      background-color: #00f0ff !important;
+      box-shadow: 0 0 16px 2px rgba(0, 240, 255, 0.85);
+    }
+    .scroll-step-pink.step-active .step-node {
+      background-color: #ff0055 !important;
+      box-shadow: 0 0 16px 2px rgba(255, 0, 85, 0.85);
+    }
+
+    /* Stagger Delays for Grid Elements */
+    .delay-1 { transition-delay: 60ms; }
+    .delay-2 { transition-delay: 130ms; }
+    .delay-3 { transition-delay: 200ms; }
+    .delay-4 { transition-delay: 270ms; }
+
+    /* Respect reduced-motion preferences for WCAG AAA Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal, .scroll-step {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .scroll-step .step-node {
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
     @media print {
       body * { visibility: hidden; }
       #ticket-modal, #ticket-modal * { visibility: visible; }
@@ -587,7 +643,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 relative z-10">
 
 <!-- Section Header -->
-<div class="text-center space-y-2">
+<div class="text-center space-y-2 scroll-reveal">
 <h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
           EVENT HIGHLIGHTS
 </h2>
@@ -600,7 +656,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 
 <!-- Highlight Card 1: 24 Hours Sprint -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-cyan/50 group border-t-2 border-t-neon-cyan/70 shadow-[0_10px_30px_rgba(0,240,255,0.06)]">
+<div class="cyber-card scroll-reveal delay-1 rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-neon-cyan/50 group border-t-2 border-t-neon-cyan/70 shadow-[0_10px_30px_rgba(0,240,255,0.06)]">
 <div>
 <div class="w-11 h-11 rounded-xl bg-neon-cyan/10 border border-neon-cyan/30 flex items-center justify-center text-neon-cyan mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -616,7 +672,7 @@
 </div>
 
 <!-- Highlight Card 2: KSUM & Alumni Mentors -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/50 group border-t-2 border-t-purple-400/70 shadow-[0_10px_30px_rgba(138,43,226,0.06)]">
+<div class="cyber-card scroll-reveal delay-2 rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-purple-400/50 group border-t-2 border-t-purple-400/70 shadow-[0_10px_30px_rgba(138,43,226,0.06)]">
 <div>
 <div class="w-11 h-11 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -632,7 +688,7 @@
 </div>
 
 <!-- Highlight Card 3: ₹1,00,000+ & Grants -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 group border-t-2 border-t-amber-400/70 shadow-[0_10px_30px_rgba(245,158,11,0.06)]">
+<div class="cyber-card scroll-reveal delay-3 rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/50 group border-t-2 border-t-amber-400/70 shadow-[0_10px_30px_rgba(245,158,11,0.06)]">
 <div>
 <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -648,7 +704,7 @@
 </div>
 
 <!-- Highlight Card 4: KTU Activity Points -->
-<div class="cyber-card rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 group border-t-2 border-t-emerald-400/70 shadow-[0_10px_30px_rgba(52,211,153,0.06)]">
+<div class="cyber-card scroll-reveal delay-4 rounded-2xl p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 group border-t-2 border-t-emerald-400/70 shadow-[0_10px_30px_rgba(52,211,153,0.06)]">
 <div>
 <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5 group-hover:scale-110 transition-transform">
 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -678,7 +734,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
 <!-- Section Header -->
-<div class="text-center space-y-2">
+<div class="text-center space-y-2 scroll-reveal">
 <h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
           SPRINT TIMELINE
 </h2>
@@ -691,7 +747,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
 
 <!-- DAY 1 COLUMN -->
-<div class="cyber-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-neon-cyan/20 relative overflow-hidden shadow-2xl">
+<div class="cyber-card scroll-reveal delay-1 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-neon-cyan/20 relative overflow-hidden shadow-2xl">
 <div class="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
 <div class="flex items-center gap-2.5">
 <span class="w-2.5 h-2.5 rounded-full bg-neon-cyan shadow-glow-cyan animate-pulse"></span>
@@ -706,8 +762,8 @@
 
 <!-- Day 1 Schedule List -->
 <div class="relative pl-5 space-y-6 border-l border-cyan-500/30">
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<div class="relative group scroll-step">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">09:00 AM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">CEC Auditorium Check-in &amp; Hardware Setup</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -715,8 +771,8 @@
 </p>
 </div>
 
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<div class="relative group scroll-step">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">11:00 AM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">KSUM Keynote &amp; Problem Statements</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -724,8 +780,8 @@
 </p>
 </div>
 
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<div class="relative group scroll-step">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">01:00 PM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Hacking Commences &amp; Mentor Round 1</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -733,8 +789,8 @@
 </p>
 </div>
 
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
+<div class="relative group scroll-step">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-cyan group-hover:bg-neon-cyan transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-cyan">08:00 PM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Mid-Sprint Evaluation &amp; Midnight Fuel</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -745,7 +801,7 @@
 </div>
 
 <!-- DAY 2 COLUMN -->
-<div class="cyber-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-neon-magenta/20 relative overflow-hidden shadow-2xl">
+<div class="cyber-card scroll-reveal delay-2 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-neon-magenta/20 relative overflow-hidden shadow-2xl">
 <div class="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
 <div class="flex items-center gap-2.5">
 <span class="w-2.5 h-2.5 rounded-full bg-neon-magenta shadow-glow-magenta animate-pulse"></span>
@@ -760,8 +816,8 @@
 
 <!-- Day 2 Schedule List -->
 <div class="relative pl-5 space-y-6 border-l border-pink-500/30">
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<div class="relative group scroll-step scroll-step-pink">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">04:00 AM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Debugging &amp; Hardware Smoke Tests</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -769,8 +825,8 @@
 </p>
 </div>
 
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<div class="relative group scroll-step scroll-step-pink">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">09:00 AM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Code Freeze &amp; Submission Deadline</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -778,8 +834,8 @@
 </p>
 </div>
 
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<div class="relative group scroll-step scroll-step-pink">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">11:00 AM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Finalist Pitches to KSUM Jury</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -787,8 +843,8 @@
 </p>
 </div>
 
-<div class="relative group">
-<div class="absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
+<div class="relative group scroll-step scroll-step-pink">
+<div class="step-node absolute -left-[27px] top-1.5 w-3 h-3 rounded-full bg-cosmic-950 border-2 border-neon-magenta group-hover:bg-neon-magenta transition-colors"></div>
 <span class="font-mono text-xs font-bold text-neon-magenta">03:00 PM</span>
 <h4 class="text-sm font-bold text-white mt-0.5">Valedictory &amp; KSUM Grant Handover</h4>
 <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">
@@ -807,7 +863,7 @@
 ============================================================ -->
 <section class="circuit-section-bg py-12 sm:py-16 scroll-mt-20 relative" data-purpose="student-spotlight" id="stories">
   <div class="max-w-4xl mx-auto px-4 sm:px-6">
-    <div class="cyber-card rounded-2xl sm:rounded-3xl p-6 sm:p-9 border border-amber-400/30 bg-gradient-to-br from-cosmic-950/95 via-cosmic-900/90 to-amber-950/20 relative overflow-hidden shadow-2xl">
+    <div class="cyber-card scroll-reveal rounded-2xl sm:rounded-3xl p-6 sm:p-9 border border-amber-400/30 bg-gradient-to-br from-cosmic-950/95 via-cosmic-900/90 to-amber-950/20 relative overflow-hidden shadow-2xl">
       <!-- Ambient Warm Glow -->
       <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-amber-500/10 blur-3xl pointer-events-none"></div>
       
@@ -857,7 +913,7 @@
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
 <!-- Section Header with Badge -->
-<div class="text-center space-y-3">
+<div class="text-center space-y-3 scroll-reveal">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-neon-cyan/40 text-neon-cyan text-[11px] font-mono font-semibold tracking-wider">
 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -873,7 +929,7 @@
 </div>
 
 <!-- Generator Card Container directly on circuit background -->
-<div class="cyber-card generator-container rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 shadow-2xl space-y-6">
+<div class="cyber-card generator-container scroll-reveal delay-1 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-white/10 shadow-2xl space-y-6">
 
 <!-- 3 Horizontal Matrix Categories -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -935,7 +991,7 @@
 <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
 
 <!-- Section Header -->
-<div class="text-center space-y-2">
+<div class="text-center space-y-2 scroll-reveal">
 <h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
           APPLY FOR SPRINT 2026
 </h2>
@@ -945,7 +1001,7 @@
 </div>
 
 <!-- Registration Form Container on top of circuit background -->
-<div class="cyber-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-10 border border-white/10 shadow-2xl">
+<div class="cyber-card scroll-reveal delay-1 rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-10 border border-white/10 shadow-2xl">
 <form class="space-y-7" id="sprint-registration-form" onsubmit="handleFormSubmit(event)">
 
 <!-- 01 CANDIDATE CONTACT DETAILS -->
@@ -1169,7 +1225,7 @@
 ============================================================ -->
 <section class="circuit-section-bg py-14 sm:py-20 scroll-mt-20" data-purpose="faq-section" id="faq">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
-    <div class="text-center space-y-2">
+    <div class="text-center space-y-2 scroll-reveal">
       <h2 class="text-2xl sm:text-4xl font-display font-black tracking-tight uppercase text-white drop-shadow-md">
         FREQUENTLY ASKED QUESTIONS
       </h2>
@@ -1178,19 +1234,19 @@
       </p>
     </div>
     <div class="space-y-3 pt-2">
-      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+      <div class="cyber-card scroll-reveal delay-1 rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
         <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">What is the team size requirement?</h3>
         <p class="text-xs text-slate-400 leading-relaxed">Teams can consist of 1 to 4 members. You can participate solo or form a full squad across different engineering branches.</p>
       </div>
-      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+      <div class="cyber-card scroll-reveal delay-2 rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
         <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">Is there any registration fee?</h3>
         <p class="text-xs text-slate-400 leading-relaxed">No! Idea Sprint 2026 is completely free for all selected student innovators, including meals, workstation power, and hardware support during the 24 hours.</p>
       </div>
-      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+      <div class="cyber-card scroll-reveal delay-3 rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
         <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">What should we bring to the venue?</h3>
         <p class="text-xs text-slate-400 leading-relaxed">Bring your laptops, chargers, hardware kits (if building IoT/Robotics), student IDs, and lots of enthusiasm. Sleeping gear and high-speed Wi-Fi will be available on-site.</p>
       </div>
-      <div class="cyber-card rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
+      <div class="cyber-card scroll-reveal delay-4 rounded-xl p-5 border border-white/10 bg-cosmic-950/80 transition-all hover:border-white/20">
         <h3 class="text-sm sm:text-base font-bold text-white mb-1.5">How do the judging and bounties work?</h3>
         <p class="text-xs text-slate-400 leading-relaxed">Projects are evaluated on originality, technical complexity, utility, and live demo quality by a distinguished jury of founders, venture capitalists, and senior engineers.</p>
       </div>
@@ -1901,6 +1957,53 @@
       toggleMobileMenu(true);
     }
   });
+</script>
+<script data-purpose="smooth-scroll-animations">
+  // Lightweight, hardware-accelerated scroll progression engine (0 impact on Lighthouse / LCP)
+  (function initScrollAnimations() {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.scroll-reveal, .scroll-step').forEach(el => {
+        el.classList.add('is-revealed', 'step-active');
+      });
+      return;
+    }
+
+    // 1. General scroll reveal observer (sections, cards, headers)
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          obs.unobserve(entry.target); // Unobserve to free up GPU & main-thread memory
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.06
+    });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // 2. Timeline Step Observer: step-by-step sequential activation as user scrolls down on mobile
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('step-active');
+        } else if (entry.boundingClientRect.top > window.innerHeight * 0.88) {
+          // Allow re-lighting if user scrolls back up
+          entry.target.classList.remove('step-active');
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -12% 0px',
+      threshold: 0.2
+    });
+
+    document.querySelectorAll('.scroll-step').forEach(step => {
+      stepObserver.observe(step);
+    });
+  })();
 </script>
 <!-- END: ClientScripts -->
 
