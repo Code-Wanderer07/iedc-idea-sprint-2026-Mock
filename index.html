@@ -447,6 +447,138 @@
       #ticket-modal { position: absolute; inset: 0; background: white; color: black; }
       #close-ticket-btn, #print-ticket-btn, #dismiss-ticket-btn { display: none !important; }
     }
+
+  /* â”€â”€ Countdown Mission Clock â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  @keyframes cd-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.1; }
+  }
+  @keyframes cd-tick {
+    0%   { transform: scale(1.14); }
+    100% { transform: scale(1); }
+  }
+  @keyframes cd-status-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
+  }
+  @keyframes cd-sec-glow-sweep {
+    0%   { box-shadow: 0 0 10px rgba(0,240,255,0.25), inset 0 0 10px rgba(0,240,255,0.08); }
+    50%  { box-shadow: 0 0 22px rgba(0,240,255,0.55), inset 0 0 16px rgba(0,240,255,0.14); }
+    100% { box-shadow: 0 0 10px rgba(0,240,255,0.25), inset 0 0 10px rgba(0,240,255,0.08); }
+  }
+
+  /* Status dots */
+  .cd-status-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #00f0ff;
+    animation: cd-status-pulse 1.6s ease-in-out infinite;
+    will-change: opacity, transform;
+  }
+
+  /* Clock row layout */
+  .cd-clock-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 6px;
+  }
+  @media (min-width: 480px) {
+    .cd-clock-row { gap: 10px; }
+  }
+
+  /* Unit card */
+  .cd-unit-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 4px 10px;
+    border-radius: 12px;
+    background: rgba(13,17,36,0.82);
+    border: 1px solid rgba(255,255,255,0.09);
+    backdrop-filter: blur(14px);
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s ease;
+  }
+  @media (min-width: 480px) {
+    .cd-unit-card { padding: 14px 6px 12px; border-radius: 16px; }
+  }
+  @media (min-width: 1024px) {
+    .cd-unit-card { padding: 18px 8px 14px; border-radius: 18px; }
+  }
+
+  /* Top accent bar */
+  .cd-top-bar {
+    position: absolute;
+    top: 0; left: 10%; right: 10%;
+    height: 2px;
+    border-radius: 0 0 2px 2px;
+    background: rgba(255,255,255,0.18);
+  }
+  .cd-top-bar-active {
+    background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+    box-shadow: 0 0 8px rgba(0,240,255,0.7);
+  }
+
+  /* Number */
+  .cd-num {
+    font-size: clamp(1.25rem, 5vw, 2.6rem);
+    font-weight: 900;
+    color: #e2e8f0;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    will-change: transform;
+  }
+  .cd-num-secs {
+    color: #00f0ff;
+    text-shadow: 0 0 12px rgba(0,240,255,0.65);
+  }
+  .cd-num.cd-tick-anim {
+    animation: cd-tick 0.18s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+
+  /* Label */
+  .cd-label {
+    font-size: clamp(7px, 1.6vw, 10px);
+    letter-spacing: 0.22em;
+    color: rgba(148,163,184,0.75);
+    text-transform: uppercase;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  @media (min-width: 480px) {
+    .cd-label { font-size: clamp(8px, 1.8vw, 11px); margin-top: 6px; }
+  }
+  .cd-label-active { color: rgba(0,240,255,0.8); }
+
+  /* Active (SECONDS) card */
+  .cd-unit-active {
+    border-color: rgba(0,240,255,0.3);
+    animation: cd-sec-glow-sweep 2s ease-in-out infinite;
+  }
+
+  /* Colon separators */
+  .cd-colon {
+    font-size: clamp(1rem, 3.5vw, 2rem);
+    font-weight: 900;
+    color: rgba(0,240,255,0.55);
+    text-shadow: 0 0 8px rgba(0,240,255,0.5);
+    line-height: 1;
+    padding-bottom: 10px;
+    animation: cd-blink 1s step-start infinite;
+    will-change: opacity;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cd-colon { animation: none; opacity: 1; }
+    .cd-status-dot { animation: none; }
+    .cd-unit-active { animation: none; }
+    .cd-num.cd-tick-anim { animation: none; }
+  }
+  /* â”€â”€ End Countdown Mission Clock â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   </style>
 <!-- END: Custom Cyberpunk & Glassmorphism Styling -->
 </head>
@@ -606,24 +738,54 @@
 </a>
 </div>
 
-<!-- Live Countdown Bar overlaying the hero background -->
-<div class="mt-8 sm:mt-11 w-full max-w-xl grid grid-cols-4 gap-2 sm:gap-4 font-mono px-1 sm:px-0" data-purpose="countdown-clock">
-<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
-<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-days">18</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">DAYS</span>
-</div>
-<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
-<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-hours">13</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">HOURS</span>
-</div>
-<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
-<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight" id="cd-mins">59</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">MINUTES</span>
-</div>
-<div class="cyber-card rounded-xl sm:rounded-2xl py-2.5 sm:py-4 px-1.5 sm:px-3 flex flex-col items-center justify-center border border-white/10 shadow-lg">
-<span class="text-lg sm:text-3xl lg:text-4xl font-extrabold text-neon-cyan tracking-tight transition-all" id="cd-secs">57</span>
-<span class="text-[8px] sm:text-xs tracking-widest text-slate-300 uppercase mt-1 font-semibold">SECONDS</span>
-</div>
+<!-- Live Countdown Bar â€” Neon Mission Clock -->
+<div class="mt-8 sm:mt-11 w-full max-w-2xl px-1 sm:px-0 font-mono" data-purpose="countdown-clock">
+
+  <!-- "MISSION LAUNCH IN" status label -->
+  <div class="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+    <span class="cd-status-dot" aria-hidden="true"></span>
+    <span class="text-[9px] sm:text-[11px] tracking-[0.25em] uppercase font-semibold text-neon-cyan/80">Mission Launch In</span>
+    <span class="cd-status-dot" aria-hidden="true"></span>
+  </div>
+
+  <!-- Timer row: 4 cards with colon separators -->
+  <div class="cd-clock-row">
+
+    <!-- DAYS -->
+    <div class="cd-unit-card">
+      <div class="cd-top-bar"></div>
+      <span class="cd-num" id="cd-days">18</span>
+      <span class="cd-label">DAYS</span>
+    </div>
+
+    <div class="cd-colon" aria-hidden="true">:</div>
+
+    <!-- HOURS -->
+    <div class="cd-unit-card">
+      <div class="cd-top-bar"></div>
+      <span class="cd-num" id="cd-hours">13</span>
+      <span class="cd-label">HRS</span>
+    </div>
+
+    <div class="cd-colon" aria-hidden="true">:</div>
+
+    <!-- MINUTES -->
+    <div class="cd-unit-card">
+      <div class="cd-top-bar"></div>
+      <span class="cd-num" id="cd-mins">59</span>
+      <span class="cd-label">MIN</span>
+    </div>
+
+    <div class="cd-colon" aria-hidden="true">:</div>
+
+    <!-- SECONDS â€” active / highlighted unit -->
+    <div class="cd-unit-card cd-unit-active">
+      <div class="cd-top-bar cd-top-bar-active"></div>
+      <span class="cd-num cd-num-secs" id="cd-secs">57</span>
+      <span class="cd-label cd-label-active">SEC</span>
+    </div>
+
+  </div><!-- /cd-clock-row -->
 </div>
 
 </div>
@@ -1746,15 +1908,24 @@
     const m = pad((diff / (1000 * 60)) % 60);
     const s = pad((diff / 1000) % 60);
 
-    if (elDays)  elDays.textContent  = d;
-    if (elHours) elHours.textContent = h;
-    if (elMins)  elMins.textContent  = m;
+    function tickAnim(el, val) {
+      if (!el) return;
+      if (el.textContent !== val) {
+        el.textContent = val;
+        el.classList.remove('cd-tick-anim');
+        // force reflow so animation restarts
+        void el.offsetWidth;
+        el.classList.add('cd-tick-anim');
+      }
+    }
+    tickAnim(elDays,  d);
+    tickAnim(elHours, h);
+    tickAnim(elMins,  m);
     if (elSecs) {
       elSecs.textContent = s;
-      elSecs.style.textShadow = '0 0 16px rgba(0, 240, 255, 0.9)';
-      setTimeout(() => {
-        elSecs.style.textShadow = '0 0 8px rgba(0, 240, 255, 0.5)';
-      }, 300);
+      elSecs.classList.remove('cd-tick-anim');
+      void elSecs.offsetWidth;
+      elSecs.classList.add('cd-tick-anim');
     }
   }
 
