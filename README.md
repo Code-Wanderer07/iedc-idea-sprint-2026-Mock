@@ -1,6 +1,6 @@
 # Idea Sprint '26 — National Innovation Ideathon Microsite
 
-[![Website Status](https://img.shields.io/badge/Status-Live%20Ready-brightgreen?style=for-the-badge&logo=vercel)](https://github.com/Code-Wanderer07/iedc-idea-sprint-2026-Mock)
+[![Website Status](https://img.shields.io/badge/Status-Live%20on%20Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://iedcideasprintmock.vercel.app/)
 [![Brand](https://img.shields.io/badge/Hosted%20By-IEDC%20Bootcamp%20CEC-blue?style=for-the-badge)](https://www.iedcbootcampcec.org/)
 [![Partner](https://img.shields.io/badge/Supported%20By-Kerala%20Startup%20Mission%20(KSUM)-00f0ff?style=for-the-badge)](https://startupmission.kerala.gov.in/)
 [![Academic](https://img.shields.io/badge/Accredited-KTU%20Activity%20Points-amber?style=for-the-badge)](https://www.ceconline.edu/)
@@ -12,8 +12,8 @@ A single-page, mobile-first responsive microsite engineered for **Idea Sprint '2
 
 ## 📌 Live Demo & Repository
 
+- **Live Deployment:** [https://iedcideasprintmock.vercel.app/](https://iedcideasprintmock.vercel.app/)
 - **GitHub Repository:** [https://github.com/Code-Wanderer07/iedc-idea-sprint-2026-Mock](https://github.com/Code-Wanderer07/iedc-idea-sprint-2026-Mock)
-- **Live Deployment:** [https://code-wanderer07.github.io/iedc-idea-sprint-2026-Mock/](https://code-wanderer07.github.io/iedc-idea-sprint-2026-Mock/)
 
 ---
 
